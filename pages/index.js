@@ -8,6 +8,8 @@ import styles from "../styles/Home.module.css";
 import Navbar from "../components/Navbar/Navbar.jsx";
 import Sats from "../components/Sats/Sats.jsx";
 import Feature from "../components/Feature/Feature.jsx";
+import Testimonials from "../components/Testimonial/Testimonials.jsx";
+import CTA from "../components/CTA/CTA.jsx"
 
 export default function Home() {
   return (
@@ -16,6 +18,8 @@ export default function Home() {
         <Navbar />
         <Sats />
         <Feature />
+        <Testimonials />
+        <CTA />
       </NextUIProvider>
     </StrictMode>
   );
