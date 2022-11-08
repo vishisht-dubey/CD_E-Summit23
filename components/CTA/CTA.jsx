@@ -3,9 +3,9 @@ import React from "react";
 const CTA = () => {
   return (
     <div>
-      <section class="">
-        <div class="container flex flex-col items-center px-4 py-12 mx-auto text-center">
-          <h1 class="text-3xl font-thin tracking-tight text-gray-700 sm:text-4xl dark:text-white">
+      <section className="">
+        <div className="container flex flex-col items-center px-4 py-12 mx-auto text-center">
+          <h1 className="text-3xl font-thin tracking-tight text-gray-700 sm:text-4xl dark:text-white">
             Convinced Enough?
           </h1>
 
@@ -13,11 +13,11 @@ const CTA = () => {
             Register Now
           </h3>
 
-          <div class="mt-6 sm:-mx-2">
-            <div class="inline-flex w-full sm:w-auto sm:mx-2">
+          <div className="mt-6 sm:-mx-2">
+            <div className="inline-flex w-full sm:w-auto sm:mx-2">
               <a
                 href="#"
-                class="font-medium inline-flex items-center justify-center w-40 px-5 py-2 text-white bg-purple-600 rounded-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:bg-transparent hover:opacity-75  focus:ring-opacity-80"
+                className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 dark:focus:ring-purple-900"
               >
                 Join Us
               </a>
