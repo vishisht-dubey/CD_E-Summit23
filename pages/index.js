@@ -6,20 +6,23 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
 import Navbar from "../components/Navbar/Navbar.jsx";
+import Hero from "../components/Hero/Hero.jsx";
 import Sats from "../components/Sats/Sats.jsx";
 import Feature from "../components/Feature/Feature.jsx";
 import Testimonials from "../components/Testimonial/Testimonials.jsx";
-import CTA from "../components/CTA/CTA.jsx"
-
+import CTA from "../components/CTA/CTA.jsx";
+import Footer from "../components/Footer/Footer.jsx";
 export default function Home() {
   return (
     <StrictMode>
       <NextUIProvider theme={theme}>
         <Navbar />
+        <Hero />
         <Sats />
         <Feature />
         <Testimonials />
         <CTA />
+        <Footer />
       </NextUIProvider>
     </StrictMode>
   );
