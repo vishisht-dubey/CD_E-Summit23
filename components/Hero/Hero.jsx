@@ -3,16 +3,17 @@ import Image from "next/image";
 const Hero = () => {
   return (
     <div>
-      <section className="">
-        <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+      <section className="grid mx-auto  px-4  sm:px-6 lg:px-8 max-w-full">
+        <div className="grid mx-auto max-w-screen-xl px-4 py-8  lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
           <div className="mr-auto place-self-center lg:col-span-7">
-            <h1 className="max-w-2xl mb-10 text-4xl font-thin tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
-              Join the Campus
-            </h1>
-            <span className="text-8xl max-w-2xl  font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-              Director Programme!
+            {/* <h1 className="max-w-2xl mb-10 font-thin tracking-tight leading-none text-lg md:text-5xl xl:text-6xl dark:text-white">
+              Join the 
+            </h1> */}
+            <span className="sm:text-8xl text-5xl max-w-2xl  font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+              Campus Director Programme!
             </span>
-            <p className="max-w-2xl  my-10 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
+            <p className="text-3xl text-gray-400 font-medium mt-8">Accelerate the entrepreneurial journey in your college!</p>
+            <p className="max-w-2xl  my-8 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400 break-words">
               Become the Student Lead of enhancing and expanding the
               entrepreneurial opportunities in your college!
             </p>
@@ -36,7 +37,7 @@ const Hero = () => {
             </a>
             <a
               href="#"
-              className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+              className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800 mt-2"
             >
               Learn More
             </a>

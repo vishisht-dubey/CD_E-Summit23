@@ -9,6 +9,7 @@ import Navbar from "../components/Navbar/Navbar.jsx";
 import Hero from "../components/Hero/Hero.jsx";
 import Sats from "../components/Sats/Sats.jsx";
 import Feature from "../components/Feature/Feature.jsx";
+import Responsibilities from "../components/Responsibilities/Responsibilities.jsx";
 import Testimonials from "../components/Testimonial/Testimonials.jsx";
 import CTA from "../components/CTA/CTA.jsx";
 import Footer from "../components/Footer/Footer.jsx";
@@ -20,6 +21,7 @@ export default function Home() {
         <Hero />
         <Sats />
         <Feature />
+        <Responsibilities />
         <Testimonials />
         <CTA />
         <Footer />

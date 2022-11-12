@@ -12,7 +12,7 @@ export default function Feature() {
           </h1>
         </div>
         <div className="lg:w-1/2">
-          <p className="text-base text-center text-white-700 md:text-lg">
+          <p className="text-base text-center px-6 text-white-700 md:text-lg">
             Through our vision of "Learn, Build and Scale" we implement various
             initiatives and events in IIT BHU to foster the entrepreneurial
             minds and create a culture of enthralling startups bound for
@@ -63,12 +63,12 @@ export default function Feature() {
           {/* <h6 className="mb-2 font-semibold leading-5 text-purple-600">
             When has justice
           </h6> */}
-          <p className="mb-3 text-sm text-center text-white-900">
-            50% off on GrowthSchool 
+          <p className="mb-3 text-sm text-center  text-white-900">
+            50% off on GrowthSchool Workshops
           </p>
-          <p className="mb-3 text-sm text-center text-white-900">
-          Workshops
-          </p>
+          {/* <p className="mb-3 text-sm text-center text-white-900">
+          
+          </p> */}
         </div>
         <div className="max-w-md flex items-center justify-center flex-col">
           <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
@@ -90,11 +90,11 @@ export default function Feature() {
             Organically grow
           </h6> */}
           <p className="mb-3 text-sm text-center text-white-900">
-            E-Learn Markets Financial 
+            E-Learn Markets Financial Course Worth 999
           </p>
-          <p className="mb-3 text-sm text-center text-white-900">
-          Course Worth 999
-          </p>
+          {/* <p className="mb-3 text-sm text-center text-white-900">
+          
+          </p> */}
         </div>
         <div className="max-w-md flex items-center justify-center flex-col">
           <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
@@ -116,9 +116,9 @@ export default function Feature() {
             A slice of heaven
           </h6> */}
           <p className="mb-3 text-sm text-center text-white-900">
-            D2C Pro Memberships worth 999 
+            D2C Pro Memberships worth 999 (Top 50 Performers)
           </p>
-          <p className="mb-3 text-sm text-center text-white-900">(Top 50 Performers)</p>
+          {/* <p className="mb-3 text-sm text-center text-white-900"></p> */}
         </div>
         <div className="max-w-md flex items-center justify-center flex-col">
           <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
@@ -140,11 +140,11 @@ export default function Feature() {
             The deep ocean
           </h6> */}
           <p className="mb-3 text-sm text-center text-white-900">
-            Access to the Entrepreneurship 
+            Access to the Entrepreneurship  Masterclass
           </p>
-          <p className="mb-3 text-sm text-center text-white-900">
-          Masterclass
-          </p>
+          {/* <p className="mb-3 text-sm text-center text-white-900">
+         
+          </p> */}
         </div>
         <div className="max-w-md flex items-center justify-center flex-col">
           <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
@@ -187,11 +187,11 @@ export default function Feature() {
             The deep ocean
           </h6> */}
           <p className="mb-3 text-center text-sm text-white-900">
-            Access to Curated Startup Helpbook
+            Access to Curated Startup Helpbook of E-Cell IIT BHU
           </p>
-          <p className="mb-3 text-center text-sm text-white-900">
-           of E-Cell IIT BHU
-          </p>
+          {/* <p className="mb-3 text-center text-sm text-white-900">
+           
+          </p> */}
         </div>
         <div className="max-w-md flex items-center justify-center flex-col">
           <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
@@ -213,11 +213,11 @@ export default function Feature() {
             The deep ocean
           </h6> */}
           <p className="mb-3 text-sm text-center text-white-900">
-            Top CDs to be featured in the E-Cell IIT BHU’s 
+            Top CDs to be featured in the E-Cell IIT BHU’s Weekly Newsletter 
           </p>
-          <p className="mb-3 text-sm text-center text-white-900">
-          Weekly Newsletter
-          </p>
+          {/* <p className="mb-3 text-sm text-center text-white-900">
+          
+          </p> */}
         </div>
         <div className="max-w-md flex items-center justify-center flex-col">
           <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
@@ -239,11 +239,11 @@ export default function Feature() {
             The deep ocean
           </h6> */}
           <p className="mb-3 text-sm text-center text-white-900">
-            Certificate of CD Programme verified by 
+            Certificate of CD Programme verified by E-Cell IIT BHU
           </p>
-          <p className="mb-3 text-sm text-center text-white-900">
-          E-Cell IIT BHU
-          </p>
+          {/* <p className="mb-3 text-sm text-center text-white-900">
+          
+          </p> */}
         </div>
         <div className="max-w-md flex items-center justify-center flex-col">
           <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
@@ -265,11 +265,11 @@ export default function Feature() {
             The deep ocean
           </h6> */}
           <p className="mb-3 text-sm text-center text-white-900">
-            Free E-Summit 2022 Merch to the 
+            Free E-Summit 2022 Merch to the  (Top 5 Performers)
           </p>
-          <p className="mb-3 text-sm text-center text-white-900">
-          (Top 5 Performers)
-          </p>
+          {/* <p className="mb-3 text-sm text-center text-white-900">
+         
+          </p> */}
         </div>
       </div>
     </div>

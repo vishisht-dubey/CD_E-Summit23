@@ -9,9 +9,9 @@ const CTA = () => {
             Convinced Enough?
           </h1>
 
-          <h3 className="font-bold  text-white-700 text-5xl mt-3 ">
+          {/* <h3 className="font-bold  text-white-700 text-5xl mt-3 ">
             Register Now
-          </h3>
+          </h3> */}
 
           <div className="mt-6 sm:-mx-2">
             <div className="inline-flex w-full sm:w-auto sm:mx-2">
@@ -19,7 +19,7 @@ const CTA = () => {
                 href="#"
                 className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 dark:focus:ring-purple-900"
               >
-                Join Us
+                Register Now
               </a>
             </div>
 
