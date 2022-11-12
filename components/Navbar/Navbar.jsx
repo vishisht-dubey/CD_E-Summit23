@@ -2,7 +2,10 @@ import { Navbar, Link, Text, Avatar, Dropdown } from "@nextui-org/react";
 import { Layout } from "./Layout.js";
 import { AcmeLogo } from "./AcmeLogo.js";
 
+import { useRouter } from "next/router";
+
 export default function Nav() {
+  const router = useRouter()
   const collapseItems = [
     "Profile",
     "Dashboard",
@@ -10,7 +13,7 @@ export default function Nav() {
     "Analytics",
     "System",
     "Deployments",
-    "My Settings",
+    "My Profile",
     "Team Settings",
     "Help & Feedback",
     "Log Out",
@@ -81,9 +84,11 @@ export default function Nav() {
                   zoey@example.com
                 </Text>
               </Dropdown.Item>
+              
               <Dropdown.Item key="settings" withDivider>
-                My Settings
+                <a href="/dashboard"> My Profile</a>
               </Dropdown.Item>
+              
               <Dropdown.Item key="team_settings">Team Settings</Dropdown.Item>
               <Dropdown.Item key="analytics" withDivider>
                 Analytics
