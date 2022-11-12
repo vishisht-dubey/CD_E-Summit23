@@ -26,7 +26,7 @@ const Testimonials = () => {
                 strokeWidth="2"
               >
                 <path
-                  stroke-linecap="round"
+                  strokeLinecap="round"
                   stroke-linejoin="round"
                   d="M15 19l-7-7 7-7"
                 />
@@ -71,7 +71,7 @@ const Testimonials = () => {
                 stroke-width="2"
               >
                 <path
-                  stroke-linecap="round"
+                  strokeLinecap="round"
                   stroke-linejoin="round"
                   d="M9 5l7 7-7 7"
                 />
