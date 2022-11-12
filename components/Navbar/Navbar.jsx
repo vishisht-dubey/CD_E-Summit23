@@ -10,7 +10,10 @@ import { Layout } from "./Layout.js";
 import { AcmeLogo } from "./AcmeLogo.js";
 import { UserAuth } from "../../context/AuthContext.jsx";
 
+import { useRouter } from "next/router";
+
 export default function Nav() {
+  const router = useRouter();
   const collapseItems = [
     "Profile",
     "Dashboard",
@@ -18,7 +21,7 @@ export default function Nav() {
     "Analytics",
     "System",
     "Deployments",
-    "My Settings",
+    "My Profile",
     "Team Settings",
     "Help & Feedback",
     "Log Out",

@@ -3,6 +3,11 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: ['flowbite.s3.amazonaws.com'],
+    remotePatterns:[
+      {
+        hostname:'images.livemint.com',
+      }
+    ]
   },
 }
 // module.exports = {
