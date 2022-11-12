@@ -38,7 +38,7 @@ export default function Nav() {
           hideIn="xs"
           variant="highlight-rounded"
         >
-          <Navbar.Link  href="#">Discover</Navbar.Link>
+          <Navbar.Link href="#">Discover</Navbar.Link>
           <Navbar.Link isActive href="#">
             Initiatives
           </Navbar.Link>

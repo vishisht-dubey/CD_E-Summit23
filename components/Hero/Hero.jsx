@@ -7,9 +7,11 @@ const Hero = () => {
         <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
           <div className="mr-auto place-self-center lg:col-span-7">
             <h1 className="max-w-2xl mb-10 text-4xl font-thin tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
-              Join the Campus 
+              Join the Campus
             </h1>
-            <span  className="text-8xl max-w-2xl  font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Director Programme!</span>
+            <span className="text-8xl max-w-2xl  font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+              Director Programme!
+            </span>
             <p className="max-w-2xl  my-10 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
               Become the Student Lead of enhancing and expanding the
               entrepreneurial opportunities in your college!
@@ -26,7 +28,7 @@ const Hero = () => {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
                   clip-rule="evenodd"
                 ></path>

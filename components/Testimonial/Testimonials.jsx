@@ -78,7 +78,6 @@ const Testimonials = () => {
               </svg>
             </button>
           </div>
-          
         </div>
       </section>
     </div>
