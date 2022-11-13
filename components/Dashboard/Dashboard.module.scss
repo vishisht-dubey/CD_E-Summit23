@@ -1,34 +1,35 @@
 .container1 {
-  padding-top: 3%;
-  padding-bottom: 3%;
+  padding-top: 0.5%;
+  padding-bottom: 0%;
   padding-left: 10%;
   padding-right: 10%;
   width: 100%;
-  background-color: black;
-  height: 112vh;
+  margin: auto;
+  background-color: rgb(203, 197, 197);
 }
 .row {
   display: flex;
   justify-content: space-between;
-  height: 40vh;
-  // height: 100%;
+
   width: 100%;
   // padding-right: 10%;
-  padding-bottom: 2%;
+  padding-bottom: 0.5%;
 }
-.row1 {
-  height: 47.7vh;
+.row4 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1%;
 }
-// @media (max-width:700px){
-//     .col1{
-//         height: 60vh;
-//     }
-// }
+.data h1 {
+  font-weight: 800;
+  letter-spacing: 1px;
+}
 
 .imgBox {
-  height: 100px;
-  width: 100px;
-  background-color: rgb(179, 81, 228);
+  height: 200px;
+  width: 200px;
+  background-color: white;
   margin: auto;
   margin-top: 1%;
   border-radius: 60%;
@@ -36,94 +37,143 @@
 }
 .userName {
   font-weight: 1000;
-  font-size: 2rem;
+  font-size: 3rem;
   letter-spacing: 1px;
   align-self: center;
   margin: auto;
   color: rgb(52, 8, 124);
 }
+
 .col {
   text-align: center;
 }
+
 .col3 h1 {
   letter-spacing: 1px;
 }
+
 @media (max-width: 340px) {
   .col3 h1 {
     font-size: 18px;
   }
 }
+
 .col2 {
   text-align: center;
   margin-bottom: 2%;
   height: 92%;
 }
+.heading {
+  font-weight: 600;
+  text-align: left;
+  padding: 2% 5%;
+  color: rgb(52, 8, 124);
+}
 .post {
   margin: -10px;
   font-weight: 500;
   color: white;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
   font-size: 20px;
+  color: rgb(95, 92, 92);
 }
-.col {
-  flex-basis: 49%;
-  background: rgb(226, 123, 209);
-  border-radius: 10px;
-  box-sizing: border-box;
-  transition: 0.5s;
-}
-.col3 {
-  flex-basis: 12%;
-  background: rgb(179, 81, 228);
-  border-radius: 10px;
-  box-sizing: border-box;
-  transition: 0.5s;
-  height: 12vh;
-  margin: 2% 2%;
-}
-.stats {
-  scale: (0.9);
-  position: relative;
-  bottom: 30%;
-  padding: 2% 2%;
-}
-@media (max-width: 700px) {
-  .stats {
-    display: none;
-  }
-}
-@media (max-width: 2500px) {
-  .stats {
-    position: relative;
-    bottom: 60%;
-  }
-}
-@media (max-width: 3000px) {
-  .stats {
-    position: relative;
-    bottom: 65%;
-  }
-}
-@media (max-width: 1900px) {
-  .stats {
-    position: relative;
-    bottom: 50%;
-  }
-}
-@media (max-width: 1020px) {
-  .stats {
-    position: relative;
-    bottom: 25%;
-  }
+.desc1 {
+  padding: 0% 2%;
 }
 
-// .col:hover{
-//     box-shadow: 0  0 20px 0px rgba(255, 252, 252, 0.2);
-// }
-@media (max-width: 700px) {
+.desc {
+  text-align: left;
+  padding: 0% 5%;
+  color: rgb(95, 92, 92);
+}
+.col {
+  flex-basis: 49.7%;
+  background: white;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+.data {
+  flex-basis: 49%;
+  background: transparent;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+.data h1 {
+  font-size: 3em;
+  padding: 0;
+  margin: 0;
+}
+
+.col3 .icons {
+  font-size: 30px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: auto;
+  // padding: 8% 0%;
+  color: rgb(90, 89, 89);
+  cursor: pointer;
+  scale: (1.1);
+}
+.number {
+  font-size: 2em;
+}
+.text {
+  // text-align: right;
+  font-size: 1.3rem;
+}
+
+.col3 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  // align-items: center;
+  flex-basis: 12%;
+  background: rgb(126, 15, 181);
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  height: 10vh;
+  margin: 2% 5%;
+}
+.col3First {
+  height: 30vh;
+}
+.col3Bottom {
+  height: 30vh;
+}
+.col3last {
+  background: transparent;
+}
+.mainCol3 {
+  padding-top: 3%;
+}
+.col3Bottom {
+  background-color: rgb(254, 87, 26);
+}
+@media (min-width: 1600px) {
+  .row4 {
+    position: relative;
+    bottom: 0%;
+  }
+}
+.col:hover {
+  box-shadow: 0 0 20px 0px rgb(137, 135, 139);
+}
+@media (max-width: 770px) {
   .row {
     flex-direction: column;
-    // margin-bottom:13%;\
-    // flex:1;
+  }
+}
+@media (max-width: 770px) {
+  .container1 {
+    padding: 1.5%;
+  }
+}
+@media (max-width: 350px) {
+  .data h1 {
+    font-size: 2em;
   }
 }
