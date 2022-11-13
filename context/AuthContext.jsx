@@ -13,7 +13,7 @@ import { auth } from "../utility/firebase";
 const AuthContext = createContext();
 export const AuthContextProvider = ({ children }) => {
   const [user, setUser] = useState({});
-  const googleSignIn = async () => {
+  const handleGoogleSignIn = async () => {
     try {
       const provider = new GoogleAuthProvider();
       signInWithRedirect(auth, provider);
@@ -36,7 +36,7 @@ export const AuthContextProvider = ({ children }) => {
     };
   });
   return (
-    <AuthContext.Provider value={{ googleSignIn, user, logout }}>
+    <AuthContext.Provider value={{ handleGoogleSignIn, user, logout }}>
       {children}
     </AuthContext.Provider>
   );

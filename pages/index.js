@@ -16,7 +16,7 @@ import CTA from "../components/CTA/CTA.jsx";
 import Footer from "../components/Footer/Footer.jsx";
 export default function Home() {
   return (
-    <StrictMode>
+    <StrictMode styles={{ maxWidth: "1600px" }}>
       <NextUIProvider theme={theme}>
         <Navbar />
         <Hero />

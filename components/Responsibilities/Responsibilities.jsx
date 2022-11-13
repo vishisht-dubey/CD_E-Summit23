@@ -52,7 +52,7 @@ const Responsibilities = () => (
                     Breathing App
                   </Text>
                   <Text color="#d1d1d1" size={12}>
-                    Get a good night's sleep.
+                    {`Get a good night's sleep.`}
                   </Text>
                 </Col>
               </Row>

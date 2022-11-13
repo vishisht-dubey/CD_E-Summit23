@@ -27,14 +27,7 @@ export default function Nav() {
     "Log Out",
   ];
 
-  const { googleSignIn, logout, user } = UserAuth();
-  const handleGoogleSignIn = async () => {
-    try {
-      await googleSignIn();
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  const { handleGoogleSignIn, logout, user } = UserAuth();
   return (
     <Layout>
       <Navbar isBordered variant="sticky">
@@ -95,6 +88,8 @@ export default function Nav() {
                 onAction={(actionKey) => {
                   if (actionKey === "logout") {
                     logout();
+                  } else if (actionKey === "dashboard") {
+                    router.push("dashboard");
                   }
                 }}
               >
@@ -108,7 +103,7 @@ export default function Nav() {
                       : user.displayName.slice(0, 22) + "..."}
                   </Text>
                 </Dropdown.Item>
-                <Dropdown.Item key="settings" withDivider>
+                <Dropdown.Item key="dashboard" withDivider>
                   Dashboard
                 </Dropdown.Item>
                 <Dropdown.Item key="logout" withDivider color="error">

@@ -13,10 +13,10 @@ export default function Feature() {
         </div>
         <div className="lg:w-1/2">
           <p className="text-base text-center px-6 text-white-700 md:text-lg">
-            Through our vision of "Learn, Build and Scale" we implement various
+            {`Through our vision of "Learn, Build and Scale" we implement various
             initiatives and events in IIT BHU to foster the entrepreneurial
             minds and create a culture of enthralling startups bound for
-            success!
+            success!`}
           </p>
         </div>
       </div>
