@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
+import { UserAuth } from "../../context/AuthContext";
 const Hero = () => {
+  const { user } = UserAuth();
   return (
     <div>
       <section className="grid mx-auto  px-4  sm:px-6 lg:px-8 max-w-full">
@@ -12,7 +14,9 @@ const Hero = () => {
             <span className="sm:text-8xl text-5xl max-w-2xl  font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
               Campus Director Programme!
             </span>
-            <p className="text-3xl text-gray-400 font-medium mt-8">Accelerate the entrepreneurial journey in your college!</p>
+            <p className="text-3xl text-gray-400 font-medium mt-8">
+              Accelerate the entrepreneurial journey in your college!
+            </p>
             <p className="max-w-2xl  my-8 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400 break-words">
               Become the Student Lead of enhancing and expanding the
               entrepreneurial opportunities in your college!
@@ -21,7 +25,7 @@ const Hero = () => {
               href="#"
               className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 dark:focus:ring-purple-900"
             >
-              Register Now
+              {user?.displayName ? "Go to Dashboard" : "Register Now"}
               <svg
                 className="w-5 h-5 ml-2 -mr-1"
                 fill="currentColor"

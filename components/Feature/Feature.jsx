@@ -140,7 +140,7 @@ export default function Feature() {
             The deep ocean
           </h6> */}
           <p className="mb-3 text-sm text-center text-white-900">
-            Access to the Entrepreneurship  Masterclass
+            Access to the Entrepreneurship Masterclass
           </p>
           {/* <p className="mb-3 text-sm text-center text-white-900">
          
@@ -165,7 +165,9 @@ export default function Feature() {
           {/* <h6 className="mb-2 font-semibold leading-5 text-purple-600">
             The deep ocean
           </h6> */}
-          <p className="mb-3 text-sm text-center text-white-900">GeeksforGeeks Coupons</p>
+          <p className="mb-3 text-sm text-center text-white-900">
+            GeeksforGeeks Coupons
+          </p>
         </div>
         <div className="max-w-md flex items-center justify-center flex-col">
           <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
@@ -213,7 +215,7 @@ export default function Feature() {
             The deep ocean
           </h6> */}
           <p className="mb-3 text-sm text-center text-white-900">
-            Top CDs to be featured in the E-Cell IIT BHU’s Weekly Newsletter 
+            Top CDs to be featured in the E-Cell IIT BHU’s Weekly Newsletter
           </p>
           {/* <p className="mb-3 text-sm text-center text-white-900">
           
@@ -265,7 +267,7 @@ export default function Feature() {
             The deep ocean
           </h6> */}
           <p className="mb-3 text-sm text-center text-white-900">
-            Free E-Summit 2022 Merch to the  (Top 5 Performers)
+            Free E-Summit 2022 Merch to the (Top 5 Performers)
           </p>
           {/* <p className="mb-3 text-sm text-center text-white-900">
          

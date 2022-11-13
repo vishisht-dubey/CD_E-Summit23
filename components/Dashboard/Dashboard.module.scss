@@ -43,17 +43,21 @@
   margin: auto;
   color: rgb(52, 8, 124);
 }
+
 .col {
   text-align: center;
 }
+
 .col3 h1 {
   letter-spacing: 1px;
 }
+
 @media (max-width: 340px) {
   .col3 h1 {
     font-size: 18px;
   }
 }
+
 .col2 {
   text-align: center;
   margin-bottom: 2%;
