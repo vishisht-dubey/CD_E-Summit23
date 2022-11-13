@@ -1,8 +1,10 @@
 import React from "react";
+import Image from "next/image";
+
 import meta from "../../assets/104.jpg";
 import meta1 from "../../assets/16.jpg";
 import meta2 from "../../assets/girl.jpg";
-import Image from "next/image";
+
 const Why = () => {
   return (
     <div>
