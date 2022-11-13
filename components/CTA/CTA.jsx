@@ -1,6 +1,9 @@
 import React from "react";
+import { UserAuth } from "../../context/AuthContext";
+import Dashboard from "../Dashboard/Dashboard";
 
 const CTA = () => {
+  const { user } = UserAuth();
   return (
     <div>
       <section className="">
@@ -19,7 +22,7 @@ const CTA = () => {
                 href="#"
                 className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 dark:focus:ring-purple-900"
               >
-                Register Now
+                {user?.displayName ? "Go to Dashboard" : "Register Now"}
               </a>
             </div>
 

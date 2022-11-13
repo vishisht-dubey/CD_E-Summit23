@@ -1,24 +1,23 @@
-.container1{
-    padding-top: 3%;
-    padding-bottom: 3%;
-    padding-left: 10%;
-    padding-right: 10%;
-    width: 100%;
-    background-color: black;
-    height: 112vh;
+.container1 {
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 10%;
+  padding-right: 10%;
+  width: 100%;
+  background-color: black;
+  height: 112vh;
 }
-.row{
-    
-    display: flex;
-    justify-content: space-between;
-    height: 40vh;
-    // height: 100%;
-    width: 100%;
-    // padding-right: 10%;
-    padding-bottom: 2%;
+.row {
+  display: flex;
+  justify-content: space-between;
+  height: 40vh;
+  // height: 100%;
+  width: 100%;
+  // padding-right: 10%;
+  padding-bottom: 2%;
 }
-.row1{
-    height: 47.7vh;
+.row1 {
+  height: 47.7vh;
 }
 // @media (max-width:700px){
 //     .col1{
@@ -26,107 +25,105 @@
 //     }
 // }
 
-.imgBox{
-    height: 100px;
-    width: 100px;
-    background-color: rgb(179, 81, 228);
-    margin: auto;
-    margin-top: 1%;
-    border-radius: 60%;
-    border: 1px solid black;
+.imgBox {
+  height: 100px;
+  width: 100px;
+  background-color: rgb(179, 81, 228);
+  margin: auto;
+  margin-top: 1%;
+  border-radius: 60%;
+  border: 1px solid black;
 }
-.userName{
-    font-weight: 1000;
-    font-size: 2rem;
-    letter-spacing: 1px;
-    align-self: center;
-    margin: auto;
-    color: rgb(52, 8, 124);
+.userName {
+  font-weight: 1000;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  align-self: center;
+  margin: auto;
+  color: rgb(52, 8, 124);
 }
-.col{
-    text-align: center;
-   
-   
+.col {
+  text-align: center;
 }
-.col3 h1{
-    letter-spacing: 1px;
+.col3 h1 {
+  letter-spacing: 1px;
 }
-@media (max-width:340px){
-    .col3 h1{
-      font-size: 18px;
-    }
+@media (max-width: 340px) {
+  .col3 h1 {
+    font-size: 18px;
+  }
 }
-.col2{
-    text-align: center;
-    margin-bottom: 2%;
-   height: 92%;
+.col2 {
+  text-align: center;
+  margin-bottom: 2%;
+  height: 92%;
 }
-.post{
-    margin: -10px;
-    font-weight: 500;
-    color: white;
-    letter-spacing: 1px;
-    font-size: 20px;
+.post {
+  margin: -10px;
+  font-weight: 500;
+  color: white;
+  letter-spacing: 1px;
+  font-size: 20px;
 }
-.col{
-    flex-basis: 49%;
-    background: rgb(226, 123, 209);
-    border-radius: 10px;
-    box-sizing: border-box;
-    transition: .5s;
+.col {
+  flex-basis: 49%;
+  background: rgb(226, 123, 209);
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: 0.5s;
 }
-.col3{
-    flex-basis: 12%;
-    background: rgb(179, 81, 228);
-    border-radius: 10px;
-    box-sizing: border-box;
-    transition: .5s;
-    height: 12vh;
-    margin: 2% 2%;
+.col3 {
+  flex-basis: 12%;
+  background: rgb(179, 81, 228);
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  height: 12vh;
+  margin: 2% 2%;
 }
-.stats{
-    scale: (0.9);
+.stats {
+  scale: (0.9);
+  position: relative;
+  bottom: 30%;
+  padding: 2% 2%;
+}
+@media (max-width: 700px) {
+  .stats {
+    display: none;
+  }
+}
+@media (max-width: 2500px) {
+  .stats {
     position: relative;
-    bottom: 30%;
-    padding: 2% 2%;
+    bottom: 60%;
+  }
 }
-@media (max-width:700px){
-    .stats{
-        display: none;
-    }
+@media (max-width: 3000px) {
+  .stats {
+    position: relative;
+    bottom: 65%;
+  }
 }
-@media (max-width:2500px){
-    .stats{
-        position: relative;
-        bottom: 60%;
-    }
+@media (max-width: 1900px) {
+  .stats {
+    position: relative;
+    bottom: 50%;
+  }
 }
-@media (max-width:3000px){
-    .stats{
-        position: relative;
-        bottom: 65%;
-    }
-}
-@media (max-width:1900px){
-    .stats{
-        position: relative;
-        bottom: 50%;
-    }
-}
-@media (max-width:1020px){
-    .stats{
-        position: relative;
-        bottom: 25%;
-    }
+@media (max-width: 1020px) {
+  .stats {
+    position: relative;
+    bottom: 25%;
+  }
 }
 
 // .col:hover{
 //     box-shadow: 0  0 20px 0px rgba(255, 252, 252, 0.2);
 // }
-@media (max-width:700px){
-    .row{
-        flex-direction: column;
-        // margin-bottom:13%;\
-        // flex:1;
-    }
+@media (max-width: 700px) {
+  .row {
+    flex-direction: column;
+    // margin-bottom:13%;\
+    // flex:1;
+  }
 }
