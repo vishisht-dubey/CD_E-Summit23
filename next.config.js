@@ -5,7 +5,7 @@ const nextConfig = {
     domains: ['flowbite.s3.amazonaws.com'],
     remotePatterns:[
       {
-        hostname:'images.livemint.com',
+        hostname:'navbharattimes.indiatimes.com',
       }
     ]
   },
