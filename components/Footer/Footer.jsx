@@ -9,7 +9,7 @@ export default function Footer() {
   const d = new Date();
   let year = d.getFullYear();
   return (
-    <footer aria-label="Site Footer" class="">
+    <footer>
       <div className="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl space-y-6">
           <div className="flex justify-center gap-6">
@@ -18,7 +18,6 @@ export default function Footer() {
               href="https://twitter.com/ecelliitbhu"
               target="_blank"
               rel="noreferrer"
-              aria-label="Twitter"
             >
               <svg
                 className="h-8 w-8"
@@ -34,7 +33,6 @@ export default function Footer() {
               href="https://www.instagram.com/ecelliitbhu/"
               target="_blank"
               rel="noreferrer"
-              ariaLabel="Instagram"
             >
               <InstagramIcon fontSize="large" />
             </Link>
@@ -44,7 +42,6 @@ export default function Footer() {
               href="https://www.linkedin.com/company/ecelliitbhu/"
               target="_blank"
               rel="noreferrer"
-              ariaLabel="LinkedIn"
             >
               <LinkedInIcon fontSize="large" />
             </Link>
@@ -54,7 +51,6 @@ export default function Footer() {
               href="https://www.youtube.com/c/ecelliitbhu"
               target="_blank"
               rel="noreferrer"
-              ariaLabel="YouTube"
             >
               <YouTubeIcon
                 className="text-red-600 hover:text-red-600/75"
@@ -63,10 +59,7 @@ export default function Footer() {
             </Link>
           </div>
 
-          <nav
-            ariaLabel="Footer Nav"
-            className="rounded-3xl border-4 border-gray-900 p-6 dark:border-gray-700"
-          >
+          <nav className="rounded-3xl border-4 border-gray-900 p-6 dark:border-gray-700">
             <ul className="flex flex-wrap justify-center gap-6 text-sm font-bold">
               <li>
                 <Link

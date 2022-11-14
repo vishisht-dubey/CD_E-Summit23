@@ -70,7 +70,7 @@ const Why = () => {
               <div className="col-span-3 row-span-3">
                 <Image
                   src={meta2}
-                  class="h-full w-full rounded-xl object-cover object-top"
+                  className="h-full w-full rounded-xl object-cover object-top"
                   width="640"
                   height="427"
                   alt="shoes"

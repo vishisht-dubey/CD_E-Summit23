@@ -50,15 +50,13 @@ export default function Nav() {
           hideIn="xs"
           variant="highlight-rounded"
         >
-          <Navbar.Link href="#">Discover</Navbar.Link>
-          <Navbar.Link isActive href="#">
-            Initiatives
-          </Navbar.Link>
-          <Navbar.Link href="#">Learn</Navbar.Link>
-          <Navbar.Link href="#">Incubator</Navbar.Link>
-          <Navbar.Link href="#">Team</Navbar.Link>
-          <Navbar.Link href="#">Startup</Navbar.Link>
-          <Navbar.Link href="#">Contact</Navbar.Link>
+          <Navbar.Link>Discover</Navbar.Link>
+          <Navbar.Link isActive>Initiatives</Navbar.Link>
+          <Navbar.Link>Learn</Navbar.Link>
+          <Navbar.Link>Incubator</Navbar.Link>
+          <Navbar.Link>Team</Navbar.Link>
+          <Navbar.Link>Startup</Navbar.Link>
+          <Navbar.Link>Contact</Navbar.Link>
         </Navbar.Content>
 
         <Navbar.Content
@@ -69,7 +67,7 @@ export default function Nav() {
             },
           }}
         >
-          {user?.displayName ? (
+          {user?.name ? (
             <Dropdown placement="bottom-right">
               <Navbar.Item>
                 <Dropdown.Trigger>
@@ -78,12 +76,11 @@ export default function Nav() {
                     as="button"
                     color="secondary"
                     size="md"
-                    src={user.photoURL}
+                    src={user.avatar}
                   />
                 </Dropdown.Trigger>
               </Navbar.Item>
               <Dropdown.Menu
-                aria-label="User menu actions"
                 color="secondary"
                 onAction={(actionKey) => {
                   if (actionKey === "logout") {
@@ -98,9 +95,9 @@ export default function Nav() {
                     Signed in as
                   </Text>
                   <Text b color="inherit" css={{ d: "flex" }}>
-                    {user.displayName.length <= 25
-                      ? user.displayName
-                      : user.displayName.slice(0, 22) + "..."}
+                    {user.name.length <= 25
+                      ? user.name
+                      : user.name.slice(0, 22) + "..."}
                   </Text>
                 </Dropdown.Item>
                 <Dropdown.Item key="dashboard" withDivider>

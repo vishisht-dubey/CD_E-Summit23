@@ -1,8 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import { UserAuth } from "../../context/AuthContext";
+import { useRouter } from "next/router";
 const Hero = () => {
-  const { user } = UserAuth();
+  const router = useRouter();
+  const { handleGoogleSignIn, logout, user } = UserAuth();
   return (
     <div>
       <section className="grid mx-auto  px-4  sm:px-6 lg:px-8 max-w-full">
@@ -21,11 +23,15 @@ const Hero = () => {
               Become the Student Lead of enhancing and expanding the
               entrepreneurial opportunities in your college!
             </p>
-            <a
-              href="dashboard"
+            <button
               className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 dark:focus:ring-purple-900"
+              onClick={() => {
+                user?.name
+                  ? router.replace("/dashboard")
+                  : handleGoogleSignIn();
+              }}
             >
-              {user?.displayName ? "Go to Dashboard" : "Register Now"}
+              {user?.name ? "Go to Dashboard" : "Register Now"}
               <svg
                 className="w-5 h-5 ml-2 -mr-1"
                 fill="currentColor"
@@ -38,7 +44,7 @@ const Hero = () => {
                   clipRule="evenodd"
                 ></path>
               </svg>
-            </a>
+            </button>
             <a
               href="#"
               className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800 mt-2"

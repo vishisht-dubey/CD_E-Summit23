@@ -1,9 +1,11 @@
+import { useRouter } from "next/router";
 import React from "react";
 import { UserAuth } from "../../context/AuthContext";
 import Dashboard from "../Dashboard/Dashboard";
 
 const CTA = () => {
-  const { user } = UserAuth();
+  const router = useRouter();
+  const { handleGoogleSignIn, logout, user } = UserAuth();
   return (
     <div>
       <section className="">
@@ -18,12 +20,16 @@ const CTA = () => {
 
           <div className="mt-6 sm:-mx-2">
             <div className="inline-flex w-full sm:w-auto sm:mx-2">
-              <a
-                href="dashboard"
+              <button
                 className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 dark:focus:ring-purple-900"
+                onClick={() => {
+                  user?.name
+                    ? router.replace("/dashboard")
+                    : handleGoogleSignIn();
+                }}
               >
-                {user?.displayName ? "Go to Dashboard" : "Register Now"}
-              </a>
+                {user?.name ? "Go to Dashboard" : "Register Now"}
+              </button>
             </div>
 
             {/* <div class="inline-flex w-full mt-4 sm:w-auto sm:mx-2 sm:mt-0">
