@@ -32,7 +32,7 @@ const Loader = () => {
 const Dashboard = () => {
   const router = useRouter();
   const { handleGoogleSignIn, logout, user, isLoggedIn } = UserAuth();
-  const registrations = user.registrations.map((person, id) =>
+  const registrations = user.registrations?.map((person, id) =>
     createData(id, person.name, person.email)
   );
   // useEffect(() => {
