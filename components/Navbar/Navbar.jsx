@@ -9,6 +9,7 @@ import {
 import { Layout } from "./Layout.js";
 import { AcmeLogo } from "./AcmeLogo.js";
 import { UserAuth } from "../../context/AuthContext.jsx";
+import { Link as NextLink } from "next/link"
 
 import { useRouter } from "next/router";
 
@@ -30,20 +31,24 @@ export default function Nav() {
   const { handleGoogleSignIn, logout, user } = UserAuth();
   return (
     <Layout>
+
       <Navbar isBordered variant="sticky">
-        <Navbar.Toggle showIn="xs" />
-        <Navbar.Brand
-          css={{
-            "@xs": {
-              w: "12%",
-            },
-          }}
-        >
-          <AcmeLogo />
-          <Text b color="inherit" hideIn="xs">
-            ACME
-          </Text>
-        </Navbar.Brand>
+        {/* <Navbar.Toggle showIn="xs" /> */}
+        <a href="/">
+          <Navbar.Brand
+            css={{
+              "@xs": {
+                w: "12%",
+              },
+            }}
+          >
+            <AcmeLogo />
+            <Text b color="inherit" hideIn="xs">
+              ACME
+            </Text>
+          </Navbar.Brand>
+        </a>
+
         <Navbar.Content
           enableCursorHighlight
           activeColor="secondary"

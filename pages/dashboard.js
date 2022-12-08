@@ -8,7 +8,7 @@ export default function DashboardPage() {
   return (
     <StrictMode>
       <NextUIProvider theme={theme}>
-        <div style={{ maxWidth: "1700px" }}>
+        <div style={{ maxWidth: "1700px", margin: "auto" }}>
           <Nav />
           <Dashboard />
           <Footer />

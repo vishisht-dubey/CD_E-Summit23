@@ -3,7 +3,7 @@ import Tilt from "react-parallax-tilt";
 import DoneIcon from "@mui/icons-material/Done";
 
 const Responsibilities = () => (
-  <div className="grid sm:grid-flow-col grid-flow-row gap-10 p-10">
+  <div className="grid mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl sm:grid-flow-col grid-flow-row gap-10 p-10">
     <Tilt>
       <Card css={{ w: "100%", h: "400px" }}>
         <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
