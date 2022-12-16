@@ -32,7 +32,7 @@ const Responsibilities = () => (
               </svg>
             </span>
             The Campus Director must assist the students with their total
-            capacity in registering for E-Cell IIT BHU's E-Summit'23
+            capacity in registering for E-Cell IIT BHU&apos;s E-Summit&apos;23
             competitions.
           </li>
           <li className="flex">
@@ -51,8 +51,9 @@ const Responsibilities = () => (
                 />
               </svg>
             </span>
-            The Campus Director must share all the updates regarding E-Summit'23
-            on a minimum of six WhatsApp groups of their college community.
+            The Campus Director must share all the updates regarding
+            E-Summit&apos;23 on a minimum of six WhatsApp groups of their
+            college community.
           </li>
           <li className="flex">
             <span className="mr-1">
@@ -72,7 +73,7 @@ const Responsibilities = () => (
             </span>
             The Campus Director may coordinate with the college authorities to
             extensively circulate the message regarding the conduction of E-Cell
-            IIT BHU's E-Summit'23.
+            IIT BHU&apos;s E-Summit&apos;23.
           </li>
         </ul>
         <ul className="space-y-3">
@@ -93,8 +94,8 @@ const Responsibilities = () => (
               </svg>
             </span>
             The Campus Director may create a separate WhatsApp Group to share
-            all the updates and notices regarding E-Cell IIT BHU's E-Summit'23
-            for all interested students.
+            all the updates and notices regarding E-Cell IIT BHU&apos;s
+            E-Summit&apos;23 for all interested students.
           </li>
           <li className="flex">
             <span className="mr-1">
@@ -132,8 +133,8 @@ const Responsibilities = () => (
               </svg>
             </span>
             The Campus Director must utilize their social media accounts in
-            promoting E-Cell IIT BHU's E-Summit'23 to the best of their
-            capacity.
+            promoting E-Cell IIT BHU&apos;s E-Summit&apos;23 to the best of
+            their capacity.
           </li>
           <li className="flex">
             <span className="mr-1">
@@ -153,7 +154,7 @@ const Responsibilities = () => (
             </span>
             The Campus Director may organize events/sessions promoting
             entrepreneurship in their respective colleges and spread the message
-            about the conduction of E-Cell IIT BHU's E-Summit'23.
+            about the conduction of E-Cell IIT BHU&apos;s E-Summit&apos;23.
           </li>
         </ul>
       </div>

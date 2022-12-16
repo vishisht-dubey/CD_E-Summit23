@@ -9,7 +9,7 @@ import {
 import { Layout } from "./Layout.js";
 import { AcmeLogo } from "./AcmeLogo.js";
 import { UserAuth } from "../../context/AuthContext.jsx";
-import { Link as NextLink } from "next/link"
+import { Link as NextLink } from "next/link";
 
 import { useRouter } from "next/router";
 
@@ -31,10 +31,9 @@ export default function Nav() {
   const { handleGoogleSignIn, logout, user } = UserAuth();
   return (
     <Layout>
-
       <Navbar isBordered variant="sticky">
         {/* <Navbar.Toggle showIn="xs" /> */}
-        <a href="/">
+        <Link href="/">
           <Navbar.Brand
             css={{
               "@xs": {
@@ -47,7 +46,7 @@ export default function Nav() {
               ACME
             </Text>
           </Navbar.Brand>
-        </a>
+        </Link>
 
         <Navbar.Content
           enableCursorHighlight
