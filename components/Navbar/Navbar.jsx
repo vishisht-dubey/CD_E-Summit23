@@ -7,11 +7,12 @@ import {
   Button,
 } from "@nextui-org/react";
 import { Layout } from "./Layout.js";
-import { AcmeLogo } from "./AcmeLogo.js";
 import { UserAuth } from "../../context/AuthContext.jsx";
 import { Link as NextLink } from "next/link";
 
 import { useRouter } from "next/router";
+import Image from "next/image";
+import logo from "../../assets/ecell_logo.png";
 
 export default function Nav() {
   const router = useRouter();
@@ -41,11 +42,10 @@ export default function Nav() {
               },
             }}
           >
-            <AcmeLogo />
-            <Text b color="inherit" hideIn="xs">
-              ACME
-            </Text>
+            
           </Navbar.Brand>
+          <Image src={logo} alt="logo" className=" cursor-pointer h-auto w-28 logo" 
+           />
         </Link>
 
         <Navbar.Content
