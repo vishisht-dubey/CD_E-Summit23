@@ -42,10 +42,10 @@ export default function Nav() {
               },
             }}
           >
-            
+
           </Navbar.Brand>
-          <Image src={logo} alt="logo" className=" cursor-pointer h-auto w-28 logo" 
-           />
+          <Image src={logo} alt="logo" className=" cursor-pointer h-auto w-28 logo"
+          />
         </Link>
 
         <Navbar.Content
@@ -54,13 +54,12 @@ export default function Nav() {
           hideIn="xs"
           variant="highlight-rounded"
         >
-          <Navbar.Link>Discover</Navbar.Link>
-          <Navbar.Link isActive>Initiatives</Navbar.Link>
-          <Navbar.Link>Learn</Navbar.Link>
-          <Navbar.Link>Incubator</Navbar.Link>
-          <Navbar.Link>Team</Navbar.Link>
-          <Navbar.Link>Startup</Navbar.Link>
-          <Navbar.Link>Contact</Navbar.Link>
+          <Navbar.Link href="/#">Home</Navbar.Link>
+          <Navbar.Link href="/#whyCD">Why CD?</Navbar.Link>
+          <Navbar.Link href="/#what-we-offer">What we offer?</Navbar.Link>
+          <Navbar.Link href="/#responsibilities">Responsibilities</Navbar.Link>
+          <Navbar.Link href="/#testimonials">Testimonials</Navbar.Link>
+          <Navbar.Link href="/#contacts">Contacts</Navbar.Link>
         </Navbar.Content>
 
         <Navbar.Content
@@ -114,7 +113,7 @@ export default function Nav() {
             </Dropdown>
           ) : (
             <Button
-              className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font- text-center text-white rounded-lg bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 dark:focus:ring-purple-900"
+              className="inline-flex items-center w-fit justify-center px-3 py-3 mr-2 text-base text-center text-white rounded-lg bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 dark:focus:ring-purple-900"
               onClick={handleGoogleSignIn}
             >
               Login

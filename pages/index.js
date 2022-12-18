@@ -18,15 +18,29 @@ export default function Home() {
   return (
     <StrictMode styles={{ maxWidth: "1600px" }}>
       <NextUIProvider theme={theme}>
+        <Head>
+          <link rel='shortcut icon' href='/static/favicon.ico' />
+          <title>Campus Director Portal | E-Cell IIT BHU</title>
+        </Head>
         <Navbar />
-        <Hero />
-        <Why />
+        <div>
+          <Hero />
+        </div>
+        <div id="whyCD">
+          <Why />
+        </div>
         <Sats />
-        <Feature />
-        <Responsibilities />
-        <Testimonials />
+        <div id="what-we-offer">
+          <Feature />
+        </div>
+        <div id="responsibilities"><Responsibilities /></div>
+        <div id="testimonials">
+          <Testimonials />
+        </div>
         <CTA />
-        <Footer />
+        <div id="contacts">
+          <Footer />
+        </div>
       </NextUIProvider>
     </StrictMode>
   );
