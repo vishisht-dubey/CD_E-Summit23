@@ -1,4 +1,21 @@
+import Image from "next/image";
 import styles from "./Feature.module.scss";
+
+import p1 from "../../assets/perks/1.png";
+import p2 from "../../assets/perks/2.png";
+import p3 from "../../assets/perks/3.png";
+import p4 from "../../assets/perks/4.png";
+import p5 from "../../assets/perks/5.png";
+import p6 from "../../assets/perks/6.png";
+import p7 from "../../assets/perks/7.png";
+import p8 from "../../assets/perks/8.png";
+import p9 from "../../assets/perks/9.png";
+import p10 from "../../assets/perks/10.png";
+import p11 from "../../assets/perks/11.png";
+import p12 from "../../assets/perks/12.png";
+import p13 from "../../assets/perks/13.png";
+import p14 from "../../assets/perks/14.png";
+
 export default function Feature() {
   return (
     <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
@@ -20,254 +37,138 @@ export default function Feature() {
           </p>
         </div>
       </div>
-      <div className="grid gap-8 row-gap-10 grid-cols-2 sm:grid-cols-2  lg:grid-cols-4 2xl:grid-cols-6">
+      <div className="grid gap-8 row-gap-10 grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 2xl:grid-cols-6">
         <div className="max-w-md flex items-center justify-center flex-col ">
-          <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
-            <svg
-              className="w-12 h-12 text-purple-600"
-              stroke="currentColor"
-              viewBox="0 0 52 52"
-            >
-              <polygon
-                strokeWidth="3"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                fill="none"
-                points="29 13 14 29 25 29 23 39 38 23 27 23"
-              />
-            </svg>
+          <div className="flex items-center justify-center w-20 h-20 mb-4 rounded-full bg-indigo-50">
+            <Image src={p1} alt="p1" width={50} height={50} />
           </div>
           {/* <h6 className="mb-2 font-semibold leading-5 text-purple-600">
             The deep ocean
           </h6> */}
           <p className="mb-3 text-sm text-center text-white-900">
-            Free E-Summit 2023 Passes
+            Get free E-Summit 2023 passes!
           </p>
         </div>
         <div className="max-w-md flex items-center justify-center flex-col">
-          <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
-            <svg
-              className="w-12 h-12 text-purple-600"
-              stroke="currentColor"
-              viewBox="0 0 52 52"
-            >
-              <polygon
-                strokeWidth="3"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                fill="none"
-                points="29 13 14 29 25 29 23 39 38 23 27 23"
-              />
-            </svg>
+          <div className="flex items-center justify-center w-20 h-20 mb-4 rounded-full bg-indigo-50">
+            <Image src={p2} alt="p2" width={50} height={50} />
           </div>
           {/* <h6 className="mb-2 font-semibold leading-5 text-purple-600">
             When has justice
           </h6> */}
           <p className="mb-3 text-sm text-center  text-white-900">
-            50% off on GrowthSchool Workshops
+            Network with Unicorn Founders and gain valuable experience.
           </p>
           {/* <p className="mb-3 text-sm text-center text-white-900">
           
           </p> */}
         </div>
         <div className="max-w-md flex items-center justify-center flex-col">
-          <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
-            <svg
-              className="w-12 h-12 text-purple-600"
-              stroke="currentColor"
-              viewBox="0 0 52 52"
-            >
-              <polygon
-                strokeWidth="3"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                fill="none"
-                points="29 13 14 29 25 29 23 39 38 23 27 23"
-              />
-            </svg>
+          <div className="flex items-center justify-center w-20 h-20 mb-4 rounded-full bg-indigo-50">
+            <Image src={p3} alt="p3" width={50} height={50} />
           </div>
           {/* <h6 className="mb-2 font-semibold leading-5 text-purple-600">
             Organically grow
           </h6> */}
           <p className="mb-3 text-sm text-center text-white-900">
-            E-Learn Markets Financial Course Worth 999
+            Certificate of Merit
           </p>
           {/* <p className="mb-3 text-sm text-center text-white-900">
           
           </p> */}
         </div>
         <div className="max-w-md flex items-center justify-center flex-col">
-          <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
-            <svg
-              className="w-12 h-12 text-purple-600"
-              stroke="currentColor"
-              viewBox="0 0 52 52"
-            >
-              <polygon
-                strokeWidth="3"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                fill="none"
-                points="29 13 14 29 25 29 23 39 38 23 27 23"
-              />
-            </svg>
+          <div className="flex items-center justify-center w-20 h-20 mb-4 rounded-full bg-indigo-50">
+            <Image src={p4} alt="p4" width={50} height={50} />
           </div>
           {/* <h6 className="mb-2 font-semibold leading-5 text-purple-600">
             A slice of heaven
           </h6> */}
           <p className="mb-3 text-sm text-center text-white-900">
-            D2C Pro Memberships worth 999 (Top 50 Performers)
+            Unstop Membership worth 2999Rs for free.
           </p>
           {/* <p className="mb-3 text-sm text-center text-white-900"></p> */}
         </div>
         <div className="max-w-md flex items-center justify-center flex-col">
-          <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
-            <svg
-              className="w-12 h-12 text-purple-600"
-              stroke="currentColor"
-              viewBox="0 0 52 52"
-            >
-              <polygon
-                strokeWidth="3"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                fill="none"
-                points="29 13 14 29 25 29 23 39 38 23 27 23"
-              />
-            </svg>
+          <div className="flex items-center justify-center w-20 h-20 mb-4 rounded-full bg-indigo-50">
+            <Image src={p5} alt="p5" width={50} height={50} />
           </div>
           {/* <h6 className="mb-2 font-semibold leading-5 text-purple-600">
             The deep ocean
           </h6> */}
           <p className="mb-3 text-sm text-center text-white-900">
-            Access to the Entrepreneurship Masterclass
+            Premium versions of student developer websites
           </p>
           {/* <p className="mb-3 text-sm text-center text-white-900">
          
           </p> */}
         </div>
         <div className="max-w-md flex items-center justify-center flex-col">
-          <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
-            <svg
-              className="w-12 h-12 text-purple-600"
-              stroke="currentColor"
-              viewBox="0 0 52 52"
-            >
-              <polygon
-                strokeWidth="3"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                fill="none"
-                points="29 13 14 29 25 29 23 39 38 23 27 23"
-              />
-            </svg>
+          <div className="flex items-center justify-center w-20 h-20 mb-4 rounded-full bg-indigo-50">
+            <Image src={p6} alt="p6" width={50} height={50} />
           </div>
           {/* <h6 className="mb-2 font-semibold leading-5 text-purple-600">
             The deep ocean
           </h6> */}
           <p className="mb-3 text-sm text-center text-white-900">
-            GeeksforGeeks Coupons
+            Get featured on Weekly Newsletter of E-Cell IIT BHU
           </p>
         </div>
         <div className="max-w-md flex items-center justify-center flex-col">
-          <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
-            <svg
-              className="w-12 h-12 text-purple-600"
-              stroke="currentColor"
-              viewBox="0 0 52 52"
-            >
-              <polygon
-                strokeWidth="3"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                fill="none"
-                points="29 13 14 29 25 29 23 39 38 23 27 23"
-              />
-            </svg>
+          <div className="flex items-center justify-center w-20 h-20 mb-4 rounded-full bg-indigo-50">
+            <Image src={p7} alt="p7" width={50} height={50} />
           </div>
           {/* <h6 className="mb-2 font-semibold leading-5 text-purple-600">
             The deep ocean
           </h6> */}
           <p className="mb-3 text-center text-sm text-white-900">
-            Access to Curated Startup Helpbook of E-Cell IIT BHU
+            Top performers will be featured on the social media handles of
+            E-Cell IIT BHU.
           </p>
           {/* <p className="mb-3 text-center text-sm text-white-900">
            
           </p> */}
         </div>
         <div className="max-w-md flex items-center justify-center flex-col">
-          <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
-            <svg
-              className="w-12 h-12 text-purple-600"
-              stroke="currentColor"
-              viewBox="0 0 52 52"
-            >
-              <polygon
-                strokeWidth="3"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                fill="none"
-                points="29 13 14 29 25 29 23 39 38 23 27 23"
-              />
-            </svg>
+          <div className="flex items-center justify-center w-20 h-20 mb-4 rounded-full bg-indigo-50">
+            <Image src={p8} alt="p8" width={50} height={50} />
           </div>
           {/* <h6 className="mb-2 font-semibold leading-5 text-purple-600">
             The deep ocean
           </h6> */}
           <p className="mb-3 text-sm text-center text-white-900">
-            Top CDs to be featured in the E-Cell IIT BHU’s Weekly Newsletter
+            Get exciting goodies, including masks, T-shirts, badges, and a lot
+            more.
           </p>
           {/* <p className="mb-3 text-sm text-center text-white-900">
           
           </p> */}
         </div>
         <div className="max-w-md flex items-center justify-center flex-col">
-          <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
-            <svg
-              className="w-12 h-12 text-purple-600"
-              stroke="currentColor"
-              viewBox="0 0 52 52"
-            >
-              <polygon
-                strokeWidth="3"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                fill="none"
-                points="29 13 14 29 25 29 23 39 38 23 27 23"
-              />
-            </svg>
+          <div className="flex items-center justify-center w-20 h-20 mb-4 rounded-full bg-indigo-50">
+            <Image src={p9} alt="p9" width={50} height={50} />
           </div>
           {/* <h6 className="mb-2 font-semibold leading-5 text-purple-600">
             The deep ocean
           </h6> */}
           <p className="mb-3 text-sm text-center text-white-900">
-            Certificate of CD Programme verified by E-Cell IIT BHU
+            Opportunity to enter BWU Cohort Internship and will be provided with
+            the prep roadmap and resources.
           </p>
           {/* <p className="mb-3 text-sm text-center text-white-900">
           
           </p> */}
         </div>
         <div className="max-w-md flex items-center justify-center flex-col">
-          <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
-            <svg
-              className="w-12 h-12 text-purple-600"
-              stroke="currentColor"
-              viewBox="0 0 52 52"
-            >
-              <polygon
-                strokeWidth="3"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                fill="none"
-                points="29 13 14 29 25 29 23 39 38 23 27 23"
-              />
-            </svg>
+          <div className="flex items-center justify-center w-20 h-20 mb-4 rounded-full bg-indigo-50">
+            <Image src={p10} alt="p10" width={50} height={50} />
           </div>
           {/* <h6 className="mb-2 font-semibold leading-5 text-purple-600">
             The deep ocean
           </h6> */}
           <p className="mb-3 text-sm text-center text-white-900">
-            Free E-Summit 2022 Merch to the (Top 5 Performers)
+            Top performers will get discounted/free courses across various
+            fields of interest like entrepreneurship, coding, and many more.
           </p>
           {/* <p className="mb-3 text-sm text-center text-white-900">
          

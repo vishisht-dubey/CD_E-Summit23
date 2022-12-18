@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import { UserAuth } from "../../context/AuthContext";
 import { useRouter } from "next/router";
+import hero from "../../assets/first.png";
+
 const Hero = () => {
   const router = useRouter();
   const { handleGoogleSignIn, logout, user } = UserAuth();
@@ -53,11 +55,14 @@ const Hero = () => {
             </a>
           </div>
           <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-            {/* <Image
-              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png"
-              alt="mockup"
-              layout="fill"
-            /> */}
+            <Image
+              src={hero}
+              className="h-full w-full rounded-xl object-cover object-top"
+              width="640"
+              height="640"
+              alt="shoe"
+              loading="lazy"
+            />
           </div>
         </div>
       </section>

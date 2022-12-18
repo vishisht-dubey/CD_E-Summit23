@@ -5,6 +5,8 @@ import meta from "../../assets/104.jpg";
 import meta1 from "../../assets/16.jpg";
 import meta2 from "../../assets/girl.jpg";
 
+import why from "../../assets/why campus director.png";
+
 const Why = () => {
   return (
     <div>
@@ -46,38 +48,7 @@ const Why = () => {
                 </a>
               </div>
             </div>
-            <div className="grid grid-cols-5 grid-rows-4 gap-4 md:w-5/12 lg:w-6/12">
-              <div className="col-span-2 row-span-4">
-                <Image
-                  src={meta}
-                  className="rounded-full"
-                  width="640"
-                  height="960"
-                  alt="shoes"
-                  loading="lazy"
-                />
-              </div>
-              <div className="col-span-2 row-span-2">
-                <Image
-                  src={meta1}
-                  className="h-full w-full rounded-xl object-cover object-top"
-                  width="640"
-                  height="640"
-                  alt="shoe"
-                  loading="lazy"
-                />
-              </div>
-              <div className="col-span-3 row-span-3">
-                <Image
-                  src={meta2}
-                  className="h-full w-full rounded-xl object-cover object-top"
-                  width="640"
-                  height="427"
-                  alt="shoes"
-                  loading="lazy"
-                />
-              </div>
-            </div>
+            <Image src={why} alt="shoes" loading="lazy" />
           </div>
         </div>
       </div>

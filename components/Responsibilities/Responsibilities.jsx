@@ -1,85 +1,10 @@
-import { Card, Col, Row, Button, Text } from "@nextui-org/react";
-import Tilt from "react-parallax-tilt";
-import DoneIcon from "@mui/icons-material/Done";
+import Image from "next/image";
+
+import img from "../../assets/responsibility.png";
 
 const Responsibilities = () => (
   <div className="grid mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl sm:grid-flow-col grid-flow-row gap-10 p-10">
-    <Tilt>
-      <Card css={{ w: "100%", h: "400px" }}>
-        <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
-          <Col>
-            <Text size={12} weight="bold" transform="uppercase" color="#9E9E9E">
-              Your day your way
-            </Text>
-            <Text h3 color="white">
-              Your checklist for better sleep
-            </Text>
-          </Col>
-        </Card.Header>
-        <Card.Body css={{ p: 0 }}>
-          <Card.Image
-            src="https://nextui.org/images/card-example-5.jpeg"
-            objectFit="cover"
-            width="100%"
-            height="100%"
-            alt="Relaxing app background"
-          />
-        </Card.Body>
-        <Card.Footer
-          isBlurred
-          css={{
-            position: "absolute",
-            bgBlur: "#0f111466",
-            borderTop: "$borderWeights$light solid $gray800",
-            bottom: 0,
-            zIndex: 1,
-          }}
-        >
-          <Row>
-            <Col>
-              <Row>
-                <Col span={3}>
-                  <Card.Image
-                    src="https://nextui.org/images/breathing-app-icon.jpeg"
-                    css={{ bg: "black", br: "50%" }}
-                    height={40}
-                    width={40}
-                    alt="Breathing app icon"
-                  />
-                </Col>
-                <Col>
-                  <Text color="#d1d1d1" size={12}>
-                    Breathing App
-                  </Text>
-                  <Text color="#d1d1d1" size={12}>
-                    {`Get a good night's sleep.`}
-                  </Text>
-                </Col>
-              </Row>
-            </Col>
-            <Col>
-              <Row justify="flex-end">
-                <Button
-                  flat
-                  auto
-                  rounded
-                  css={{ color: "#94f9f0", bg: "#94f9f026" }}
-                >
-                  <Text
-                    css={{ color: "inherit" }}
-                    size={12}
-                    weight="bold"
-                    transform="uppercase"
-                  >
-                    Get App
-                  </Text>
-                </Button>
-              </Row>
-            </Col>
-          </Row>
-        </Card.Footer>
-      </Card>
-    </Tilt>
+    <Image src={img} alt="img" width={500} height={500} />
 
     <div className="flex flex-col justify-center">
       <div className="max-w-xl mb-6">
@@ -106,8 +31,9 @@ const Responsibilities = () => (
                 />
               </svg>
             </span>
-            Acting as a link between IIT (BHU) Varanasi and your own campus
-            throughout the year.
+            The Campus Director must assist the students with their total
+            capacity in registering for E-Cell IIT BHU&apos;s E-Summit&apos;23
+            competitions.
           </li>
           <li className="flex">
             <span className="mr-1">
@@ -125,9 +51,9 @@ const Responsibilities = () => (
                 />
               </svg>
             </span>
-            Coordinating with Strategic Relations’ team of Entrepreneurship
-            Cell, IIT BHU to conduct various events throughout the year in your
-            college.
+            The Campus Director must share all the updates regarding
+            E-Summit&apos;23 on a minimum of six WhatsApp groups of their
+            college community.
           </li>
           <li className="flex">
             <span className="mr-1">
@@ -145,7 +71,9 @@ const Responsibilities = () => (
                 />
               </svg>
             </span>
-            Networking with Local Startups and Startup Co-Founders.
+            The Campus Director may coordinate with the college authorities to
+            extensively circulate the message regarding the conduction of E-Cell
+            IIT BHU&apos;s E-Summit&apos;23.
           </li>
         </ul>
         <ul className="space-y-3">
@@ -165,8 +93,9 @@ const Responsibilities = () => (
                 />
               </svg>
             </span>
-            Inviting Alumni Entrepreneurs of your college to participate in
-            Shark Tank IIT BHU.
+            The Campus Director may create a separate WhatsApp Group to share
+            all the updates and notices regarding E-Cell IIT BHU&apos;s
+            E-Summit&apos;23 for all interested students.
           </li>
           <li className="flex">
             <span className="mr-1">
@@ -184,8 +113,48 @@ const Responsibilities = () => (
                 />
               </svg>
             </span>
-            Publicising entrepreneurship oriented events and competitions in
-            your college as well as over Social Media.
+            The Campus Director must keep a tab on the total headcount of
+            registered students and valid proof for each registered student.
+          </li>
+          <li className="flex">
+            <span className="mr-1">
+              <svg
+                className="w-5 h-5 mt-px text-deep-purple-accent-400"
+                stroke="currentColor"
+                viewBox="0 0 52 52"
+              >
+                <polygon
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  fill="none"
+                  points="29 13 14 29 25 29 23 39 38 23 27 23"
+                />
+              </svg>
+            </span>
+            The Campus Director must utilize their social media accounts in
+            promoting E-Cell IIT BHU&apos;s E-Summit&apos;23 to the best of
+            their capacity.
+          </li>
+          <li className="flex">
+            <span className="mr-1">
+              <svg
+                className="w-5 h-5 mt-px text-deep-purple-accent-400"
+                stroke="currentColor"
+                viewBox="0 0 52 52"
+              >
+                <polygon
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  fill="none"
+                  points="29 13 14 29 25 29 23 39 38 23 27 23"
+                />
+              </svg>
+            </span>
+            The Campus Director may organize events/sessions promoting
+            entrepreneurship in their respective colleges and spread the message
+            about the conduction of E-Cell IIT BHU&apos;s E-Summit&apos;23.
           </li>
         </ul>
       </div>

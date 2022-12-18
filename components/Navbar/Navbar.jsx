@@ -8,7 +8,7 @@ import {
 } from "@nextui-org/react";
 import { Layout } from "./Layout.js";
 import { UserAuth } from "../../context/AuthContext.jsx";
-import { Link as NextLink } from "next/link"
+import { Link as NextLink } from "next/link";
 
 import { useRouter } from "next/router";
 import Image from "next/image";
@@ -32,7 +32,6 @@ export default function Nav() {
   const { handleGoogleSignIn, logout, user } = UserAuth();
   return (
     <Layout>
-
       <Navbar isBordered variant="sticky">
         {/* <Navbar.Toggle showIn="xs" /> */}
         <Link href="/">
