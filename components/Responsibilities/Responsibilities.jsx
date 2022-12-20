@@ -1,10 +1,12 @@
-import Image from "next/image";
+import React, {useEffect, useRef} from "react";
+import Lottie from "lottie-react";
+import animation from './responsibilities.json'
 
-import img from "../../assets/responsibility.png";
+const Responsibilities = () => {
 
-const Responsibilities = () => (
+  return(
   <div className="grid mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl sm:grid-flow-col grid-flow-row gap-10 p-10">
-    <Image src={img} alt="img" width={500} height={500} />
+    <Lottie animationData={animation}/>
 
     <div className="flex flex-col justify-center">
       <div className="max-w-xl mb-6">
@@ -160,5 +162,6 @@ const Responsibilities = () => (
       </div>
     </div>
   </div>
-);
+  );
+};
 export default Responsibilities;

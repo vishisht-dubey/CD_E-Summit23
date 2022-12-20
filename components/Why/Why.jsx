@@ -1,17 +1,16 @@
 import React from "react";
-import Image from "next/image";
+import Lottie from "lottie-react";
+import animation from './why campus director.json'
 
-import meta from "../../assets/104.jpg";
-import meta1 from "../../assets/16.jpg";
-import meta2 from "../../assets/girl.jpg";
 
-import why from "../../assets/why campus director.png";
+
 
 const Why = () => {
+
   return (
     <div>
       <div className="py-16">
-        <div className="container m-auto space-y-8 px-6 text-gray-500 md:px-12 lg:px-20">
+        <div className=" container m-auto space-y-8 px-6 text-gray-500 md:px-12 lg:px-20">
           <div className="justify-center gap-6 text-center md:flex md:text-left lg:items-center lg:gap-16">
             <div className="order-last mb-6 space-y-6 md:mb-0 md:w-6/12 lg:w-6/12">
               <h1 className="text-4xl font-bold text-gray-800 md:text-5xl dark:text-white">
@@ -48,7 +47,7 @@ const Why = () => {
                 </a>
               </div>
             </div>
-            <Image src={why} alt="shoes" loading="lazy" />
+            <Lottie animationData={animation}/>
           </div>
         </div>
       </div>
