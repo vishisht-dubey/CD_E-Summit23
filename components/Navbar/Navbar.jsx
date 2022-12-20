@@ -54,12 +54,12 @@ export default function Nav() {
           hideIn="xs"
           variant="highlight-rounded"
         >
-          <Navbar.Link href="#">Home</Navbar.Link>
-          <Navbar.Link href="#whyCD">Why CD?</Navbar.Link>
-          <Navbar.Link href="#what-we-offer">What we offer?</Navbar.Link>
-          <Navbar.Link href="#responsibilities">Responsibilities</Navbar.Link>
-          <Navbar.Link href="#testimonials">Testimonials</Navbar.Link>
-          <Navbar.Link href="#contacts">Contacts</Navbar.Link>
+          <Navbar.Link href="/#">Home</Navbar.Link>
+          <Navbar.Link href="/#whyCD">Why CD?</Navbar.Link>
+          <Navbar.Link href="/#what-we-offer">What we offer?</Navbar.Link>
+          <Navbar.Link href="/#responsibilities">Responsibilities</Navbar.Link>
+          <Navbar.Link href="/#testimonials">Testimonials</Navbar.Link>
+          <Navbar.Link href="/#contacts">Contacts</Navbar.Link>
         </Navbar.Content>
 
         <Navbar.Content
