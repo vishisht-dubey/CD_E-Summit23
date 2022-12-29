@@ -19,7 +19,7 @@ export default function Home() {
     <StrictMode styles={{ maxWidth: "1600px" }}>
       <NextUIProvider theme={theme}>
         <Head>
-          <link rel='shortcut icon' href='/static/favicon.ico' />
+          <link rel='icon' href='/favicon.ico' />
           <title>Campus Director Portal | E-Cell IIT BHU</title>
         </Head>
         <Navbar />
