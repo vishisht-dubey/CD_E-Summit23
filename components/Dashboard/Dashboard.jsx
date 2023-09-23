@@ -35,14 +35,7 @@ const Dashboard = () => {
   const registrations = user.registrations?.map((person, id) =>
     createData(id, person.name, person.email)
   );
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     !user?.name &&
-  //       setTimeout(() => {
-  //         !user?.name && router.replace("/");
-  //       }, 1000);
-  //   }, 3000);
-  // }, []);
+  
   return (
     <>
       {!user?.name ? (

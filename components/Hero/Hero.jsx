@@ -26,7 +26,7 @@ const Hero = () => {
               entrepreneurial opportunities in your college!
             </p>
             <button
-              className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 dark:focus:ring-purple-900"
+              className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:ring-orange-300 dark:focus:ring-orange-600"
               onClick={() => {
                 user?.name
                   ? router.replace("/dashboard")
@@ -49,9 +49,9 @@ const Hero = () => {
             </button>
             <a
               href="#whyCD"
-              className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800 mt-2"
+              className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-black-300 rounded-lg dark:text-white dark:border-gray-700 bg-black hover:bg-gray-800 mt-2"
             >
-              Learn More
+              Learn More 
             </a>
           </div>
           <div className="hidden lg:mt-0 lg:col-span-5 lg:flex" >

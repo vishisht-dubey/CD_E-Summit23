@@ -31,8 +31,8 @@ export default function Nav() {
 
   const { handleGoogleSignIn, logout, user } = UserAuth();
   return (
-    <Layout>
-      <Navbar isBordered variant="sticky">
+    <Layout className="bg-white">
+      <Navbar  variant="sticky" >
         {/* <Navbar.Toggle showIn="xs" /> */}
         <Link href="/">
           <Navbar.Brand
@@ -50,16 +50,18 @@ export default function Nav() {
 
         <Navbar.Content
           enableCursorHighlight
-          activeColor="secondary"
+          activeColor="#FFA500"
           hideIn="xs"
           variant="highlight-rounded"
+          className="p-2"
         >
-          <Navbar.Link href="/#">Home</Navbar.Link>
-          <Navbar.Link href="/#whyCD">Why CD?</Navbar.Link>
-          <Navbar.Link href="/#what-we-offer">What we offer?</Navbar.Link>
-          <Navbar.Link href="/#responsibilities">Responsibilities</Navbar.Link>
-          <Navbar.Link href="/#testimonials">Testimonials</Navbar.Link>
-          <Navbar.Link href="/#contacts">Contacts</Navbar.Link>
+          {/* border-b-2 border-transparent transition border-opacity-0 group-hover:border-orange-500 */}
+          <Navbar.Link href="/#" className="  border-orange-500 hover:border-b-2">Home</Navbar.Link>
+          <Navbar.Link href="/#whyCD" className="  border-orange-500 hover:border-b-2">Why CD?</Navbar.Link>
+          <Navbar.Link href="/#what-we-offer" className="  border-orange-500 hover:border-b-2">What we offer?</Navbar.Link>
+          <Navbar.Link href="/#responsibilities" className="  border-orange-500 hover:border-b-2">Responsibilities</Navbar.Link>
+          <Navbar.Link href="/#testimonials" className="  border-orange-500 hover:border-b-2">Testimonials</Navbar.Link>
+          <Navbar.Link href="/#contacts" className="border-orange-500 hover:border-b-2">Contacts</Navbar.Link>
         </Navbar.Content>
 
         <Navbar.Content
@@ -113,7 +115,7 @@ export default function Nav() {
             </Dropdown>
           ) : (
             <Button
-              className="inline-flex items-center w-fit justify-center px-3 py-3 mr-2 text-base text-center text-white rounded-lg bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 dark:focus:ring-purple-900"
+              className="inline-flex items-center w-fit justify-center px-3 py-3 mr-2 text-base text-center text-white rounded-lg bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:ring-purple-300 dark:focus:ring-purple-900"
               onClick={handleGoogleSignIn}
             >
               Login

@@ -17,12 +17,15 @@ import Footer from "../components/Footer/Footer.jsx";
 export default function Home() {
   return (
     <StrictMode styles={{ maxWidth: "1600px" }}>
-      <NextUIProvider theme={theme}>
+      <NextUIProvider theme={theme} id="vishisht">
         <Head>
-          <link rel='icon' href='/favicon.ico' />
+          <link rel="icon" href="/favicon.ico" />
           <title>Campus Director Portal | E-Cell IIT BHU</title>
         </Head>
-        <Navbar />
+        <div className="w-full bg-white">
+          <Navbar />
+        </div>
+
         <div>
           <Hero />
         </div>
@@ -33,7 +36,9 @@ export default function Home() {
         <div id="what-we-offer">
           <Feature />
         </div>
-        <div id="responsibilities"><Responsibilities /></div>
+        <div id="responsibilities">
+          <Responsibilities />
+        </div>
         <div id="testimonials">
           <Testimonials />
         </div>
@@ -48,11 +53,11 @@ export default function Home() {
 
 //theme
 const theme = createTheme({
-  type: "dark", // it could be "light" or "dark"
+  type: "light", // it could be "light" or "dark"
   theme: {
     colors: {
       // brand colors
-      primaryLight: "$green200",
+      primaryLight: "$white",
       primaryLightHover: "$green300",
       primaryLightActive: "$green400",
       primaryLightContrast: "$green600",

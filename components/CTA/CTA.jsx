@@ -21,7 +21,7 @@ const CTA = () => {
           <div className="mt-6 sm:-mx-2">
             <div className="inline-flex w-full sm:w-auto sm:mx-2">
               <button
-                className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 dark:focus:ring-purple-900"
+                className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:ring-orange-300 dark:focus:ring-orange-600"
                 onClick={() => {
                   user?.name
                     ? router.replace("/dashboard")
