@@ -13,15 +13,15 @@ const Why = () => {
         <div className=" container m-auto space-y-8 px-6 text-gray-500 md:px-12 lg:px-20">
           <div className="justify-center gap-6 text-center md:flex md:text-left lg:items-center lg:gap-16">
             <div className="order-last mb-6 space-y-6 md:mb-0 md:w-6/12 lg:w-6/12">
-              <h1 className="text-4xl font-bold text-gray-800 md:text-5xl dark:text-white">
+              <h1 className="text-4xl font-bold text-gray-800 md:text-5xl text-black">
                 Why
               </h1>
-              <h1 className="text-4xl font-bold text-gray-800 md:text-5xl dark:text-white">
-                <span className="text-primary dark:text-sky-300">
+              <h1 className="text-4xl font-bold text-gray-800 md:text-5xl ">
+                <span className="text-primary text-orange-600">
                   Campus Director
                 </span>
               </h1>
-              <p className="text-lg text-gray-600 dark:text-gray-300">
+              <p className="text-lg text-gray-600 dark:text-gray-500">
                 Devoted to acting as a symbiotic link between the entrepreneurs
                 and the existing startup ecosystem, E-Cell IIT BHU provides you
                 with an opportunity to lead and educate the students masses in

@@ -15,13 +15,13 @@ const Hero = () => {
             {/* <h1 className="max-w-2xl mb-10 font-thin tracking-tight leading-none text-lg md:text-5xl xl:text-6xl dark:text-white">
               Join the 
             </h1> */}
-            <span className="sm:text-8xl text-5xl max-w-2xl  font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+            <span className="sm:text-8xl text-5xl max-w-2xl  font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
               Campus Director Programme!
             </span>
-            <p className="text-3xl text-gray-400 font-medium mt-8">
+            <p className="text-3xl text-gray-500 font-medium mt-8">
               Accelerate the entrepreneurial journey in your college!
             </p>
-            <p className="max-w-2xl  my-8 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400 break-words">
+            <p className="max-w-2xl  my-8 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl break-words">
               Become the Student Lead of enhancing and expanding the
               entrepreneurial opportunities in your college!
             </p>

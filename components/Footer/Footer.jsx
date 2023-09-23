@@ -59,11 +59,11 @@ export default function Footer() {
             </Link>
           </div>
 
-          <nav className="rounded-3xl border-4 border-gray-900 p-6 dark:border-gray-700">
+          <nav className="rounded-3xl border-4 border-orange-500 p-6 dark:border-orange-400">
             <ul className="flex flex-wrap justify-center gap-6 text-sm font-bold">
               <li>
                 <Link
-                  className="text-gray-900 transition hover:text-gray-900/75 dark:text-white dark:hover:text-white/75"
+                  className="text-gray-900 transition hover:text-gray-900/75 dark:text-black dark:hover:text-black/75"
                   href="https://www.ecelliitbhu.com/"
                   target="_blank"
                   rel="noreferrer"
@@ -74,7 +74,7 @@ export default function Footer() {
 
               <li>
                 <Link
-                  className="text-gray-900 transition hover:text-gray-900/75 dark:text-white dark:hover:text-white/75"
+                  className="text-gray-900 transition hover:text-gray-900/75 dark:text-black dark:hover:text-black/75"
                   href="/"
                   target="_blank"
                   rel="noreferrer"
@@ -85,7 +85,7 @@ export default function Footer() {
 
               <li>
                 <Link
-                  className="text-gray-900 transition hover:text-gray-900/75 dark:text-white dark:hover:text-white/75"
+                  className="text-gray-900 transition hover:text-gray-900/75 dark:text-black dark:hover:text-black/75"
                   href="/"
                   target="_blank"
                   rel="noreferrer"
@@ -96,7 +96,7 @@ export default function Footer() {
 
               <li>
                 <Link
-                  className="text-gray-900 transition hover:text-gray-900/75 dark:text-white dark:hover:text-white/75"
+                  className="text-gray-900 transition hover:text-gray-900/75 dark:text-black dark:hover:text-black/75"
                   href="/"
                   target="_blank"
                   rel="noreferrer"
@@ -107,7 +107,7 @@ export default function Footer() {
             </ul>
           </nav>
 
-          <p className="mx-auto max-w-lg text-xs text-gray-500 dark:text-gray-400">
+          <p className="mx-auto max-w-lg text-xs text-gray-500 dark:text-gray-500">
             {`E - Cell, IIT BHU Varanasi is a non-profit organization established to nurture the entrepreneurial culture in our college, and open doors for the next generation of startup founders, entrepreneurs and changemakers to leave behind a legacy!`}
             <span className="mt-4 block"> &copy; {year} E-Cell IIT BHU </span>
           </p>

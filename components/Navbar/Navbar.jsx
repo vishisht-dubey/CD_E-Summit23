@@ -55,8 +55,8 @@ export default function Nav() {
           variant="highlight-rounded"
           className="p-2"
         >
-          {/* border-b-2 border-transparent transition border-opacity-0 group-hover:border-orange-500 */}
-          <Navbar.Link href="/#" className="  border-orange-500 hover:border-b-2">Home</Navbar.Link>
+
+          <Navbar.Link href="/#" className="border-orange-500 hover:border-b-2">Home</Navbar.Link>
           <Navbar.Link href="/#whyCD" className="  border-orange-500 hover:border-b-2">Why CD?</Navbar.Link>
           <Navbar.Link href="/#what-we-offer" className="  border-orange-500 hover:border-b-2">What we offer?</Navbar.Link>
           <Navbar.Link href="/#responsibilities" className="  border-orange-500 hover:border-b-2">Responsibilities</Navbar.Link>
