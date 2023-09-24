@@ -14,6 +14,7 @@ import Responsibilities from "../components/Responsibilities/Responsibilities.js
 import Testimonials from "../components/Testimonial/Testimonials.jsx";
 import CTA from "../components/CTA/CTA.jsx";
 import Footer from "../components/Footer/Footer.jsx";
+import Sponsors from "../components/Sponsors/Sponsors";
 export default function Home() {
   return (
     <StrictMode styles={{ maxWidth: "1600px" }}>
@@ -41,6 +42,9 @@ export default function Home() {
         </div>
         <div id="testimonials">
           <Testimonials />
+        </div>
+        <div id="sponsors">
+          <Sponsors/>
         </div>
         <CTA />
         <div id="contacts">
