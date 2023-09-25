@@ -13,10 +13,12 @@ export default function DashboardPage() {
           <link rel='shortcut icon' href='/static/favicon.ico' />
           <title>Leaderboard | Campus Director Portal | E-Cell IIT BHU</title>
         </Head>
-        <div style={{ maxWidth: '1700px', margin: 'auto' }}>
+        <div style={{backgroundColor:"white", margin: 'auto' }}>
           <Nav />
           {/* <Dashboard /> */}
+          <div className="flex justify-center">
           <Leaderboard/>
+          </div>
           <Footer />
         </div>
       </NextUIProvider>

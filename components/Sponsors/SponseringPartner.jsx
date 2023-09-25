@@ -13,8 +13,8 @@ export default function SponseringPartner() {
     <React.Fragment>
       <Box
         sx={{
-          width: 300,
-          height: 300,
+          width: 350,
+          height: 350,
           borderRadius: "20px",
           backgroundColor: "white",
           "&:hover": {
