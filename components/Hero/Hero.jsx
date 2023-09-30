@@ -49,7 +49,7 @@ const Hero = () => {
             </button>
             <a
               href="#whyCD"
-              className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-black-300 rounded-lg dark:text-white dark:border-gray-700 bg-black hover:bg-gray-800 mt-2"
+              className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center border border-black-300 rounded-lg text-white border-gray-700 bg-black hover:bg-gray-800 mt-2"
             >
               Learn More 
             </a>

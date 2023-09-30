@@ -107,8 +107,11 @@ export default function Footer() {
             </ul>
           </nav>
 
-          <p className="mx-auto max-w-lg text-xs text-gray-500 dark:text-gray-500">
-            {`E - Cell, IIT BHU Varanasi is a non-profit organization established to nurture the entrepreneurial culture in our college, and open doors for the next generation of startup founders, entrepreneurs and changemakers to leave behind a legacy!`}
+          <p className="mx-auto max-w-lg text-xs text-gray-500">
+            <Link href="https://www.ecelliitbhu.com/" target="_blank" rel="noreferrer">
+              E - Cell
+            </Link>
+            {`, IIT BHU Varanasi is a non-profit organization established to nurture the entrepreneurial culture in our college, and open doors for the next generation of startup founders, entrepreneurs and changemakers to leave behind a legacy!`}
             <span className="mt-4 block"> &copy; {year} E-Cell IIT BHU </span>
           </p>
         </div>

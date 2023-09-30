@@ -87,7 +87,7 @@ export default function Nav() {
                 </Dropdown.Trigger>
               </Navbar.Item>
               <Dropdown.Menu
-                color="secondary"
+                
                 onAction={(actionKey) => {
                   if (actionKey === "logout") {
                     logout();
@@ -96,7 +96,7 @@ export default function Nav() {
                   }
                 }}
               >
-                <Dropdown.Item key="profile" css={{ height: "$18" }}>
+                <Dropdown.Item key="profile" css={{ height: "$18" }} className="hover:bg-orange-400">
                   <Text b color="inherit" css={{ d: "flex" }}>
                     Signed in as
                   </Text>
@@ -106,7 +106,7 @@ export default function Nav() {
                       : user.name.slice(0, 22) + "..."}
                   </Text>
                 </Dropdown.Item>
-                <Dropdown.Item key="dashboard" withDivider>
+                <Dropdown.Item key="dashboard" withDivider className="hover:bg-orange-400">
                   Dashboard
                 </Dropdown.Item>
                 <Dropdown.Item key="logout" withDivider color="error">
@@ -116,7 +116,7 @@ export default function Nav() {
             </Dropdown>
           ) : (
             <Button
-              className="inline-flex items-center w-fit justify-center px-3 py-3 mr-2 text-base text-center text-white rounded-lg bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:ring-purple-300 dark:focus:ring-purple-900"
+              className="inline-flex items-center w-fit justify-center px-3 py-3 mr-2 text-base text-center text-white rounded-lg bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:ring-orange-300"
               onClick={handleGoogleSignIn}
             >
               Login
@@ -139,7 +139,7 @@ export default function Nav() {
           {collapseItems.map((item, index) => (
             <Navbar.CollapseItem
               key={item}
-              activeColor="secondary"
+              activeColor="orange"
               css={{
                 color: index === collapseItems.length - 1 ? "$error" : "",
               }}

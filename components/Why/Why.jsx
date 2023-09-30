@@ -39,9 +39,9 @@ const Why = () => {
           </a> */}
                 <a
                   href="#what-we-offer"
-                  className="relative flex h-12 w-full items-center justify-center px-8 before:absolute before:inset-0 before:rounded-full before:border before:border-black before:bg-black before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-black dark:before:bg-black sm:w-max"
+                  className="relative flex h-12 w-full items-center justify-center px-8 before:absolute before:inset-0 before:rounded-full before:border before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 before:border-black before:bg-black sm:w-max"
                 >
-                  <span className="relative text-base font-semibold text-primary dark:text-white">
+                  <span className="relative text-base font-semibold text-primary text-white">
                     Learn More
                   </span>
                 </a>
