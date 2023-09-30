@@ -21,7 +21,7 @@
     "dotenv": "^16.3.1",
     "eslint": "8.26.0",
     "eslint-config-next": "13.0.1",
-    "firebase": "^9.14.0",
+    "firebase": "^9.23.0",
     "lottie-react": "^2.3.1",
     "lottie-web": "^5.10.0",
     "next": "^13.0.3",

@@ -66,6 +66,7 @@ export const AuthContextProvider = ({ children }) => {
         console.log("No such document!");
       }
     }
+    return;
   };
 
   useEffect(() => {
