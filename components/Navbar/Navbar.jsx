@@ -59,9 +59,9 @@ export default function Nav() {
           variant="highlight-rounded"
           className="p-2"
         >
-          <Navbar.Link href="/#" className="border-orange-500 hover:border-b-2">
+          {/* <Navbar.Link href="/#" className="border-orange-500 hover:border-b-2">
             Home
-          </Navbar.Link>
+          </Navbar.Link> */}
           <Navbar.Link
             href="/#whyCD"
             className="  border-orange-500 hover:border-b-2"
@@ -145,7 +145,7 @@ export default function Nav() {
             </Dropdown>
           ) : (
             <Button
-              className="inline-flex items-center w-fit justify-center px-3 py-3 mr-2 text-base text-center text-white rounded-lg bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:ring-purple-300 dark:focus:ring-purple-900"
+              className="inline-flex items-center w-fit justify-center px-3 py-3 mr-2 text-base text-center text-white rounded-lg bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:ring-orange-300 "
               onClick={handleGoogleSignIn}
             >
               Login
