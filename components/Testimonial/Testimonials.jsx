@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 const Testimonials = () => {
   return (
     <div>
@@ -49,6 +48,7 @@ const Testimonials = () => {
                   width={100}
                   height={100}
                 /> */}
+
                 <div className="mt-4 text-center">
                   <h1 className="font-semibold text-white">
                     Sukriti Gill

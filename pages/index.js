@@ -1,6 +1,5 @@
 import React, { StrictMode } from "react";
 import { createTheme, NextUIProvider, Text } from "@nextui-org/react";
-
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
@@ -20,7 +19,7 @@ export default function Home() {
     <StrictMode styles={{ maxWidth: "1600px" }}>
       <NextUIProvider theme={theme} id="vishisht">
         <Head>
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="shortcut icon" href="/favicon.ico" />
           <title>Campus Director Portal | E-Cell IIT BHU</title>
         </Head>
         <div className="w-full bg-white">
