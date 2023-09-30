@@ -116,3 +116,12 @@ export default function Leaderboard() {
     </div>
   );
 }
+
+
+
+// id
+// college name
+// first name
+// ranking
+// referal code 
+// points

@@ -44,7 +44,7 @@ export default function Home() {
           <Testimonials />
         </div>
         <div id="sponsors">
-          <Sponsors/>
+          {/* <Sponsors/> */}
         </div>
         <CTA />
         <div id="contacts">

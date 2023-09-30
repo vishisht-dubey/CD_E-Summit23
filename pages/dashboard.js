@@ -13,7 +13,7 @@ export default function DashboardPage() {
           <link rel='shortcut icon' href='/static/favicon.ico' />
           <title>Dasboard | Campus Director Portal | E-Cell IIT BHU</title>
         </Head>
-        <div style={{ maxWidth: '1700px', margin: 'auto' }}>
+        <div style={{ margin: 'auto',backgroundColor:"white" }}>
           <Nav />
           <Dashboard />
           <Footer />
@@ -24,7 +24,7 @@ export default function DashboardPage() {
 }
 
 const theme = createTheme({
-  type: 'dark', // it could be "light" or "dark"
+  type: 'light', // it could be "light" or "dark"
   theme: {
     colors: {
       // brand colors

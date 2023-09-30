@@ -80,7 +80,7 @@ export default function Nav() {
                   <Avatar
                     bordered
                     as="button"
-                    color="secondary"
+                    color="orange"
                     size="md"
                     src={user.avatar}
                   />

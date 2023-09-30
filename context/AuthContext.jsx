@@ -6,6 +6,7 @@ import {
   signInWithRedirect,
   signOut,
   onAuthStateChanged,
+  getRedirectResult,
 } from "firebase/auth";
 
 import { auth, db } from "../utility/firebase";
@@ -64,6 +65,7 @@ export const AuthContextProvider = ({ children }) => {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      console.log(currentUser);
       userRegistration(currentUser);
     });
     return () => {
