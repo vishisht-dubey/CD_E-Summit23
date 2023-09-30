@@ -10,7 +10,7 @@ import { getFirestore } from "firebase/firestore";
 const firebaseConfig = {
   apiKey: "AIzaSyCUstIzj4rkWDDwj54YDeYPKirixR8yFjQ",
   authDomain: "e-summit-23.firebaseapp.com",
-  databaseURL: "https://e-summit-23-default-rtdb.firebaseio.com",
+  databaseURL: "https://summit-23-default-rtdb.asia-southeast1.firebasedatabase.app/",
   projectId: "e-summit-23",
   storageBucket: "e-summit-23.appspot.com",
   messagingSenderId: "993378576778",

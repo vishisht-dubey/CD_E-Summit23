@@ -20,9 +20,14 @@ export const AuthContextProvider = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(user?.displayName);
   const handleGoogleSignIn = async () => {
     try {
-      const provider = new GoogleAuthProvider();
-      signInWithRedirect(auth, provider);
+      const data = await signInWithRedirect(auth, new GoogleAuthProvider());
+      console.log(data);
       setIsLoggedIn(true);
+      return onAuthStateChanged(auth, (user) => {
+        if (user == null) {
+          console.log("Error hai bhai");
+        }
+      });
     } catch (error) {
       setIsLoggedIn(false);
       console.log(error);
