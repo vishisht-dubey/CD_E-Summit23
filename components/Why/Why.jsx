@@ -13,7 +13,7 @@ const Why = () => {
         <div className=" container m-auto space-y-8 px-6 text-gray-500 md:px-12 lg:px-20">
           <div className="justify-center gap-6 text-center md:flex md:text-left lg:items-center lg:gap-16">
             <div className="order-last mb-6 space-y-6 md:mb-0 md:w-6/12 lg:w-6/12">
-              <h1 className="text-4xl font-bold text-gray-800 md:text-5xl text-black">
+              <h1 className="text-4xl font-bold md:text-5xl text-black">
                 Why
               </h1>
               <h1 className="text-4xl font-bold text-gray-800 md:text-5xl ">
@@ -41,7 +41,7 @@ const Why = () => {
                   href="#what-we-offer"
                   className="relative flex h-12 w-full items-center justify-center px-8 before:absolute before:inset-0 before:rounded-full before:border before:border-black before:bg-black before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-black dark:before:bg-black sm:w-max"
                 >
-                  <span className="relative text-base font-semibold text-primary dark:text-white">
+                  <span className="relative text-base font-semibold text-primary text-white">
                     Learn More
                   </span>
                 </a>
