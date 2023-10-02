@@ -53,7 +53,7 @@ const Testimonials = () => {
                   <h1 className="font-semibold text-white">
                     Sukriti Gill
                   </h1>
-                  <span className="text-sm text-gray-500 dark:text-gray-400">
+                  <span className="text-sm text-gray-400">
                     Marketer
                   </span>
                 </div>
