@@ -8,7 +8,7 @@ import {
   onAuthStateChanged,
   getRedirectResult,
 } from "firebase/auth";
-
+import Cookies from "js-cookie";
 import { auth, db } from "../utility/firebase";
 import { useRouter } from "next/router";
 import { doc, getDoc, setDoc, collection, set } from "firebase/firestore";
@@ -37,6 +37,13 @@ export const AuthContextProvider = ({ children }) => {
   };
 
   const userRegistration = async (googleUser) => {
+    const currentDate = new Date();
+    const expires = new Date(
+      currentDate.getFullYear() + 10,
+      currentDate.getMonth(),
+      currentDate.getDate()
+    );
+
     if (user?.name) return;
     if (googleUser?.displayName) {
       const CDref = doc(db, "campus directors", googleUser.uid);
@@ -44,7 +51,9 @@ export const AuthContextProvider = ({ children }) => {
       if (CDSnap.exists()) {
         // console.log("Document data:", CDSnap.data());
         setUser(CDSnap.data());
+        Cookies.set("isFirstLoggedIn", "false", { expires: expires });
       } else {
+        Cookies.set("isFirstLoggedIn", "true", { expires: expires });
         const newUser = {
           id: googleUser.uid,
           referral_code:

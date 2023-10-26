@@ -1,4 +1,4 @@
-import React, { Component, useEffect } from "react";
+import React, { Component, useEffect, useState } from "react";
 
 import style from "./Dashboard.module.scss";
 import Image from "next/image";
@@ -13,7 +13,9 @@ import {
   TableRow,
   TableBody,
 } from "@mui/material";
-
+import FormComponent from "../Form/form";
+import { getColumnsFromOptions } from "@mui/x-data-grid-generator";
+import Cookies  from "js-cookie";
 function createData(rank, name, email) {
   return { rank, name, email };
 }
@@ -30,12 +32,13 @@ const Loader = () => {
   );
 };
 const Dashboard = () => {
+  const isFirstLoggedIn = Cookies.get("isFirstLoggedIn")
   const router = useRouter();
   const { handleGoogleSignIn, logout, user, isLoggedIn } = UserAuth();
   const registrations = user.registrations?.map((person, id) =>
     createData(id, person.name, person.email)
   );
-  
+
   return (
     <>
       {!user?.name ? (
@@ -47,6 +50,10 @@ const Dashboard = () => {
           >
             Login
           </button>
+        </div>
+      ) : isFirstLoggedIn == "true" ? (
+        <div className={style.container1}>
+          <FormComponent />
         </div>
       ) : (
         <div className={style.container1}>
@@ -144,6 +151,3 @@ function RegistrationsTable({ rows }) {
 }
 
 export default Dashboard;
-
-
-
