@@ -15,18 +15,18 @@ const Hero = () => {
             {/* <h1 className="max-w-2xl mb-10 font-thin tracking-tight leading-none text-lg md:text-5xl xl:text-6xl dark:text-white">
               Join the 
             </h1> */}
-            <span className="sm:text-8xl text-5xl max-w-2xl  font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+            <span className="sm:text-8xl text-5xl max-w-2xl  font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
               Campus Director Programme!
             </span>
-            <p className="text-3xl text-gray-400 font-medium mt-8">
+            <p className="text-3xl text-gray-500 font-medium mt-8">
               Accelerate the entrepreneurial journey in your college!
             </p>
-            <p className="max-w-2xl  my-8 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400 break-words">
+            <p className="max-w-2xl  my-8 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl break-words">
               Become the Student Lead of enhancing and expanding the
               entrepreneurial opportunities in your college!
             </p>
             <button
-              className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 dark:focus:ring-purple-900"
+              className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:ring-orange-300 dark:focus:ring-orange-600"
               onClick={() => {
                 user?.name
                   ? router.replace("/dashboard")
@@ -49,9 +49,9 @@ const Hero = () => {
             </button>
             <a
               href="#whyCD"
-              className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800 mt-2"
+              className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center border border-black-300 rounded-lg text-white border-gray-700 bg-black hover:bg-gray-800 mt-2"
             >
-              Learn More
+              Learn More 
             </a>
           </div>
           <div className="hidden lg:mt-0 lg:col-span-5 lg:flex" >

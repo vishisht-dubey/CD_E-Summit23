@@ -1,6 +1,5 @@
 import React, { StrictMode } from "react";
 import { createTheme, NextUIProvider, Text } from "@nextui-org/react";
-
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
@@ -14,15 +13,19 @@ import Responsibilities from "../components/Responsibilities/Responsibilities.js
 import Testimonials from "../components/Testimonial/Testimonials.jsx";
 import CTA from "../components/CTA/CTA.jsx";
 import Footer from "../components/Footer/Footer.jsx";
+import Sponsors from "../components/Sponsors/Sponsors";
 export default function Home() {
   return (
     <StrictMode styles={{ maxWidth: "1600px" }}>
-      <NextUIProvider theme={theme}>
+      <NextUIProvider theme={theme} id="vishisht">
         <Head>
-          <link rel='icon' href='/favicon.ico' />
+          <link rel="shortcut icon" href="/favicon.ico" />
           <title>Campus Director Portal | E-Cell IIT BHU</title>
         </Head>
-        <Navbar />
+        <div className="w-full bg-white">
+          <Navbar />
+        </div>
+
         <div>
           <Hero />
         </div>
@@ -33,9 +36,14 @@ export default function Home() {
         <div id="what-we-offer">
           <Feature />
         </div>
-        <div id="responsibilities"><Responsibilities /></div>
+        <div id="responsibilities">
+          <Responsibilities />
+        </div>
         <div id="testimonials">
           <Testimonials />
+        </div>
+        <div id="sponsors">
+          {/* <Sponsors/> */}
         </div>
         <CTA />
         <div id="contacts">
@@ -48,11 +56,11 @@ export default function Home() {
 
 //theme
 const theme = createTheme({
-  type: "dark", // it could be "light" or "dark"
+  type: "light", // it could be "light" or "dark"
   theme: {
     colors: {
       // brand colors
-      primaryLight: "$green200",
+      primaryLight: "$white",
       primaryLightHover: "$green300",
       primaryLightActive: "$green400",
       primaryLightContrast: "$green600",

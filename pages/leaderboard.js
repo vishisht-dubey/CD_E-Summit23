@@ -4,18 +4,21 @@ import React, { StrictMode } from 'react';
 import Dashboard from '../components/Dashboard/Dashboard';
 import Footer from '../components/Footer/Footer';
 import Nav from '../components/Navbar/Navbar';
-
+import Leaderboard from '../components/Leaderboard/Leaderboard';
 export default function DashboardPage() {
   return (
     <StrictMode>
       <NextUIProvider theme={theme}>
         <Head>
           <link rel='shortcut icon' href='/static/favicon.ico' />
-          <title>Dasboard | Campus Director Portal | E-Cell IIT BHU</title>
+          <title>Leaderboard | Campus Director Portal | E-Cell IIT BHU</title>
         </Head>
-        <div style={{ margin: 'auto',backgroundColor:"white" }}>
+        <div style={{backgroundColor:"white", margin: 'auto' }}>
           <Nav />
-          <Dashboard />
+          {/* <Dashboard /> */}
+          <div className="flex justify-center">
+          <Leaderboard/>
+          </div>
           <Footer />
         </div>
       </NextUIProvider>

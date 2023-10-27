@@ -1,0 +1,170 @@
+.container1 {
+  padding-top: 0.5%;
+  padding-bottom: 0%;
+  padding-left: 10%;
+  padding-right: 10%;
+  width: 100%;
+  margin: 50px auto;
+}
+
+.leaderboardDiv {
+  height: "40%";
+  width: "100%";
+  background: "white";
+  border-radius: "20px";
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 0.5%;
+}
+.row4 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+}
+.data {
+  font-weight: 800;
+  font-size: 2rem !important;
+  //   letter-spacing: 1px;
+}
+
+.imgBox {
+  height: 120px;
+  width: 120px;
+  margin: auto;
+  margin-top: 1%;
+  border-radius: 60%;
+}
+.userName {
+  font-size: 2rem;
+  //   letter-spacing: 1px;
+  align-self: center;
+  margin: 20px auto 10px auto;
+  font-weight: bold;
+  //   color: rgb(52, 8, 124);
+}
+
+.col {
+  text-align: center;
+}
+
+.col3 h1 {
+  letter-spacing: 1px;
+}
+
+@media (max-width: 340px) {
+  .col3 h1 {
+    font-size: 18px;
+  }
+}
+
+.col2 {
+  text-align: center;
+  width: 100%;
+  //   margin-bottom: 2%;
+  //   height: 92%;
+}
+.heading {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-top: 20px;
+  text-align: center;
+  padding: 2% 5%;
+  //   color: rgb(52, 8, 124);
+}
+.post {
+  margin: -10px;
+  font-weight: 500;
+  letter-spacing: 0px;
+  font-size: 20px;
+}
+
+.desc {
+  text-align: left;
+  padding: 0% 5%;
+}
+.col {
+  box-sizing: border-box;
+  margin: auto;
+}
+// .data {
+//   flex-basis: 49%;
+//   background: transparent;
+//   border-radius: 10px;
+//   box-sizing: border-box;
+//   transition: 0.5s;
+// }
+.data {
+  font-size: 3em;
+  padding: 0;
+  margin: 20px 10px 10px 10px;
+}
+
+.col3 .icons {
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  // padding: 8% 0%;
+}
+.number {
+  font-size: 2em;
+}
+.text {
+  // text-align: right;
+  font-size: 1.3rem;
+}
+
+.col3 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  // align-items: center;
+  flex-basis: 12%;
+  background: rgb(126, 15, 181);
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  height: 10vh;
+  margin: 2% 5%;
+}
+.col3First {
+  height: 30vh;
+}
+.col3Bottom {
+  height: 30vh;
+}
+.col3last {
+  background: transparent;
+}
+.mainCol3 {
+  padding-top: 3%;
+}
+.col3Bottom {
+  background-color: rgb(254, 87, 26);
+}
+@media (min-width: 1600px) {
+  .row4 {
+    position: relative;
+    bottom: 0%;
+  }
+}
+@media (max-width: 770px) {
+  .row {
+    flex-direction: column;
+  }
+}
+@media (max-width: 770px) {
+  .container1 {
+    padding: 1.5%;
+  }
+}
+@media (max-width: 350px) {
+  .data h1 {
+    font-size: 2em;
+  }
+}
