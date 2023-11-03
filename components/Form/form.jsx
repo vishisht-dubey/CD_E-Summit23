@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { TextField, Button } from "@mui/material";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../utility/firebase";
+import Spinner from "../Spinner/spinner";
 export default function FormComponent() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -10,6 +11,7 @@ export default function FormComponent() {
   const [linkedinId, setLinkedinId] = useState("");
   const [instagramId, setInstagramId] = useState("");
   const [instituteName, setInstituteName] = useState("");
+  const [loading, setLoading] = useState(false);
   const formData = {
     username: name,
     useremail: email,
@@ -19,7 +21,8 @@ export default function FormComponent() {
     userinstitutename: instituteName,
     useryearofstudy: yearOfStudy,
   };
-  const handleSubmit = async () => {
+  const handleSubmit = async (event) => {
+    setLoading(true);
     const campusAmbassadorCollection = collection(
       db,
       "campus_ambassadors_info"
@@ -28,7 +31,8 @@ export default function FormComponent() {
       campusAmbassadorCollection,
       formData
     );
-    console.log(newCampusAmbassadorRef.id);
+    // newCampusAmbassadorRef.id ? setLoading(false) : setLoading(true);
+    location.reload();
   };
   return (
     <div>
@@ -101,15 +105,19 @@ export default function FormComponent() {
         />
       </div>
       <div className="flex justify-end mt-4">
-        <Button
-          variant="contained"
-          color="warning"
-          size="large"
-          className="bg-orange-500"
-          onClick={handleSubmit}
-        >
-          Submit
-        </Button>
+        {!loading ? (
+          <Button
+            variant="contained"
+            color="warning"
+            size="large"
+            className="bg-orange-500"
+            onClick={handleSubmit}
+          >
+            Submit
+          </Button>
+        ) : (
+          <Spinner />
+        )}
       </div>
     </div>
   );

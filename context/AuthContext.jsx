@@ -17,16 +17,26 @@ const AuthContext = createContext();
 export const AuthContextProvider = ({ children }) => {
   const router = useRouter();
   const [user, setUser] = useState({});
+  const [loading,setLoading] = useState(false);
+  // const currentDate = new Date();
+  // const expires = new Date(
+  //   currentDate.getFullYear() + 10,
+  //   currentDate.getMonth(),
+  //   currentDate.getDate()
+  // );
   const [isLoggedIn, setIsLoggedIn] = useState(user?.displayName);
+  // Cookies.set("isFirstLoggedIn", "false", { expires: expires });
   const handleGoogleSignIn = async () => {
+    setLoading(true);
     try {
       const provider = new GoogleAuthProvider();
-      signInWithRedirect(auth, provider);
+      signInWithPopup(auth, provider);
       setIsLoggedIn(true);
     } catch (error) {
       setIsLoggedIn(false);
       console.log(error);
     }
+    setLoading(false);
   };
   const logout = async () => {
     console.log("LOGGING OUT");
@@ -74,7 +84,7 @@ export const AuthContextProvider = ({ children }) => {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      console.log(currentUser);
+      // console.log(currentUser);
       userRegistration(currentUser);
     });
     return () => {
@@ -83,7 +93,7 @@ export const AuthContextProvider = ({ children }) => {
   }, []);
   return (
     <AuthContext.Provider
-      value={{ handleGoogleSignIn, user, logout, isLoggedIn }}
+      value={{ handleGoogleSignIn, user, logout, isLoggedIn,loading }}
     >
       {children}
     </AuthContext.Provider>

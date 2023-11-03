@@ -1,3 +1,4 @@
+"use client";
 import {
   Navbar,
   Link,
@@ -13,8 +14,9 @@ import { Link as NextLink } from "next/link";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import logo from "../../assets/ecell_logo.png";
+import Spinner from "../Spinner/spinner.jsx";
 
-export default function Nav() {
+export default function NavbarComponent() {
   const router = useRouter();
   const collapseItems = [
     "Profile",
@@ -27,11 +29,11 @@ export default function Nav() {
     "Team Settings",
     "Help & Feedback",
     "Log Out",
-    "Leaderboard"
+    "Leaderboard",
   ];
 
-  const { handleGoogleSignIn, logout, user } = UserAuth();
-  console.log(user);
+  const { handleGoogleSignIn, logout, user, loading } = UserAuth();
+  // console.log(loading);
   return (
     <Layout className="bg-white">
       <Navbar variant="sticky">
@@ -140,7 +142,7 @@ export default function Nav() {
                 <Dropdown.Item
                   key="dashboard"
                   withDivider
-                  className="hover:bg-orange-400"
+                  className="hover:bg-orange-400 hover:ring-orange-600"
                 >
                   Dashboard
                 </Dropdown.Item>
@@ -156,7 +158,7 @@ export default function Nav() {
                 </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
-          ) : (
+          ) : !loading ? (
             <Button
               className="inline-flex items-center w-fit justify-center px-3 py-3 mr-2 text-base text-center text-white rounded-lg bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:ring-orange-300"
               onClick={handleGoogleSignIn}
@@ -175,6 +177,8 @@ export default function Nav() {
                 ></path>
               </svg>
             </Button>
+          ) : (
+            <Spinner />
           )}
         </Navbar.Content>
         <Navbar.Collapse>

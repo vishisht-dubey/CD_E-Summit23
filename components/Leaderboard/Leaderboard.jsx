@@ -3,29 +3,17 @@ import { DataGrid } from "@mui/x-data-grid";
 import { Box } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 const columns = [
-  { field: "id", headerName: "ID",width:100 },
-  { field: "firstName", headerName: "First name",width:170 },
-  { field: "lastName", headerName: "Last name",width:170 },
+  { field: "id", headerName: "ID", width: 120 },
+  { field: "ranking", headerName: "Ranking", width: 120 },
+  { field: "firstName", headerName: "First name", width: 170 },
   {
     field: "points",
     headerName: "Points",
     type: "number",
-    width:170
+    width: 120,
   },
-  {
-    field: "linkedinId",
-    headerName: "Linkedin Id",
-    sortable: false,
-    width:200
-  },
-  {
-    field: "instagramId",
-    headerName: "Instagram Id",
-    width:200,
-    sortable: false,
-  },
-  { field: "instituteName", headerName: "Institue Name",width:200},
-  { field: "referalCode", headerName: "Referal Code",width:200},
+  { field: "instituteName", headerName: "Institue Name", width: 200 },
+  { field: "referalCode", headerName: "Referal Code", width: 200 },
 ];
 
 const rows = [
@@ -69,7 +57,7 @@ const rows = [
 
 export default function Leaderboard() {
   return (
-    <div className="bg-white w-3/4 h-3/4">
+    <div className="bg-white w-3/6 h-3/4">
       <div
         style={{
           display: "flex",
@@ -116,10 +104,3 @@ export default function Leaderboard() {
 }
 
 
-
-// id
-// college name
-// first name
-// ranking
-// referal code 
-// points
