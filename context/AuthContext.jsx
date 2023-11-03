@@ -17,13 +17,14 @@ const AuthContext = createContext();
 export const AuthContextProvider = ({ children }) => {
   const router = useRouter();
   const [user, setUser] = useState({});
-  const [loading,setLoading] = useState(false);
-  // const currentDate = new Date();
-  // const expires = new Date(
-  //   currentDate.getFullYear() + 10,
-  //   currentDate.getMonth(),
-  //   currentDate.getDate()
-  // );
+  const [ambassador, setAmbassador] = useState({});
+  const [loading, setLoading] = useState(false);
+  const currentDate = new Date();
+  const expires = new Date(
+    currentDate.getFullYear() + 10,
+    currentDate.getMonth(),
+    currentDate.getDate()
+  );
   const [isLoggedIn, setIsLoggedIn] = useState(user?.displayName);
   // Cookies.set("isFirstLoggedIn", "false", { expires: expires });
   const handleGoogleSignIn = async () => {
@@ -47,13 +48,6 @@ export const AuthContextProvider = ({ children }) => {
   };
 
   const userRegistration = async (googleUser) => {
-    const currentDate = new Date();
-    const expires = new Date(
-      currentDate.getFullYear() + 10,
-      currentDate.getMonth(),
-      currentDate.getDate()
-    );
-
     if (user?.name) return;
     if (googleUser?.displayName) {
       const CDref = doc(db, "campus directors", googleUser.uid);
@@ -82,6 +76,34 @@ export const AuthContextProvider = ({ children }) => {
     }
   };
 
+  const ambassadorInfo = async (person) => {
+    if (person?.useremail) {
+      const AIref = doc(db, "campus_ambassadors_info", person.useremail);
+      const AISnap = await getDoc(AIref);
+      if (AISnap.exists()) {
+        setAmbassador(AISnap.data());
+        console.log("Campus Ambassadors info exists");
+      } else {
+        const newUser = {
+          username: person.username,
+          useremail: person.useremail,
+          usercontact: person.usercontact,
+          userlinkedinid: person.userlinkedinid,
+          userinstaid: person.userinstaid,
+          userinstitutename: person.userinstitutename,
+          useryearofstudy: person.useryearofstudy,
+        };
+        await setDoc(
+          doc(db, "campus_ambassadors_info", person.useremail),
+          newUser
+        );
+        Cookies.set("ambassdInfo", JSON.stringify(newUser), { expires: expires });
+        setAmbassador(newUser);
+        console.log("Campus Ambassadors info does not exists");
+      }
+    }
+  };
+
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       // console.log(currentUser);
@@ -93,7 +115,15 @@ export const AuthContextProvider = ({ children }) => {
   }, []);
   return (
     <AuthContext.Provider
-      value={{ handleGoogleSignIn, user, logout, isLoggedIn,loading }}
+      value={{
+        handleGoogleSignIn,
+        user,
+        logout,
+        isLoggedIn,
+        loading,
+        ambassadorInfo,
+        ambassador,
+      }}
     >
       {children}
     </AuthContext.Provider>

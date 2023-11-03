@@ -34,10 +34,21 @@ const Loader = () => {
 const Dashboard = () => {
   const isFirstLoggedIn = Cookies.get("isFirstLoggedIn");
   const router = useRouter();
-  const { handleGoogleSignIn, logout, user, isLoggedIn } = UserAuth();
+  const { handleGoogleSignIn, logout, user, isLoggedIn, ambassador } =
+    UserAuth();
+  // console.log(ambassador);
+  // console.log(user);
   const registrations = user.registrations?.map((person, id) =>
     createData(id, person.name, person.email)
   );
+  const ambassdInfo = Cookies.get("ambassdInfo");
+  let ambassdData;
+  try {
+    ambassdData = JSON.parse(ambassdInfo);
+  } catch (err) {
+    console.log(err);
+  }
+  console.log(ambassdData)
 
   return (
     <>
@@ -51,7 +62,7 @@ const Dashboard = () => {
             Login
           </button>
         </div>
-      ) : isFirstLoggedIn == "true" ? (
+      ) : !ambassdData?.useremail ? (
         <div className={style.container1}>
           <FormComponent />
         </div>

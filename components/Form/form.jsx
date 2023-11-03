@@ -3,7 +3,9 @@ import { TextField, Button } from "@mui/material";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../utility/firebase";
 import Spinner from "../Spinner/spinner";
+import { UserAuth } from "../../context/AuthContext";
 export default function FormComponent() {
+  const { ambassadorInfo } = UserAuth();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [contact, setContact] = useState(0);
@@ -23,6 +25,7 @@ export default function FormComponent() {
   };
   const handleSubmit = async (event) => {
     setLoading(true);
+    ambassadorInfo(formData);
     const campusAmbassadorCollection = collection(
       db,
       "campus_ambassadors_info"
