@@ -5,7 +5,7 @@ import { db } from "../../utility/firebase";
 import Spinner from "../Spinner/spinner";
 import { UserAuth } from "../../context/AuthContext";
 export default function FormComponent() {
-  const { ambassadorInfo } = UserAuth();
+  const {user, ambassadorInfo } = UserAuth();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [contact, setContact] = useState(0);
@@ -16,7 +16,7 @@ export default function FormComponent() {
   const [loading, setLoading] = useState(false);
   const formData = {
     username: name,
-    useremail: email,
+    useremail: user?.email,
     usercontact: contact,
     userlinkedinid: linkedinId,
     userinstaid: instagramId,
@@ -52,7 +52,7 @@ export default function FormComponent() {
             setName(event.target.value);
           }}
         />
-        <TextField
+        {/* <TextField
           variant="filled"
           label="Email Address"
           type="email"
@@ -60,7 +60,7 @@ export default function FormComponent() {
           onChange={(event) => {
             setEmail(event.target.value);
           }}
-        />
+        /> */}
         <TextField
           variant="filled"
           label="Linkedin ID"

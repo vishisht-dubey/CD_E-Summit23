@@ -3,7 +3,9 @@ import React, { Component, useEffect, useState } from "react";
 import style from "./Dashboard.module.scss";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { db } from "../../utility/firebase";
 import { UserAuth } from "../../context/AuthContext";
+import { doc, getDoc, setDoc, collection, set } from "firebase/firestore";
 import {
   TableCell,
   TableContainer,
@@ -34,8 +36,9 @@ const Loader = () => {
 const Dashboard = () => {
   const isFirstLoggedIn = Cookies.get("isFirstLoggedIn");
   const router = useRouter();
-  const { handleGoogleSignIn, logout, user, isLoggedIn, ambassador } =
+  const { handleGoogleSignIn, logout, user, isLoggedIn, ambassadorInfo } =
     UserAuth();
+  const [isAmbassadorPresent, setisAmbassadorPresent] = useState(false);
   // console.log(ambassador);
   // console.log(user);
   const registrations = user.registrations?.map((person, id) =>
@@ -48,7 +51,26 @@ const Dashboard = () => {
   } catch (err) {
     console.log(err);
   }
-  console.log(ambassdData)
+  console.log(ambassdData);
+  const checkAmbassador = async () => {
+    try {
+      const AIref = doc(db, "campus_ambassadors_info", user.email);
+      const AISnap = await getDoc(AIref);
+      if (AISnap.exists()) {
+        setisAmbassadorPresent(true);
+        console.log("data present");
+      } else {
+        setisAmbassadorPresent(false);
+        console.log("data absent");
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  useEffect(() => {
+    checkAmbassador();
+  }, []);
+  console.log(isAmbassadorPresent);
 
   return (
     <>
@@ -62,7 +84,7 @@ const Dashboard = () => {
             Login
           </button>
         </div>
-      ) : !ambassdData?.useremail ? (
+      ) : !isAmbassadorPresent ? (
         <div className={style.container1}>
           <FormComponent />
         </div>

@@ -77,11 +77,14 @@ export const AuthContextProvider = ({ children }) => {
   };
 
   const ambassadorInfo = async (person) => {
-    if (person?.useremail) {
-      const AIref = doc(db, "campus_ambassadors_info", person.useremail);
+    if (user?.email) {
+      const AIref = doc(db, "campus_ambassadors_info", user.email);
       const AISnap = await getDoc(AIref);
       if (AISnap.exists()) {
         setAmbassador(AISnap.data());
+        Cookies.set("ambassdInfo", JSON.stringify(AISnap.data()), {
+          expires: expires,
+        });
         console.log("Campus Ambassadors info exists");
       } else {
         const newUser = {
@@ -94,15 +97,18 @@ export const AuthContextProvider = ({ children }) => {
           useryearofstudy: person.useryearofstudy,
         };
         await setDoc(
-          doc(db, "campus_ambassadors_info", person.useremail),
+          doc(db, "campus_ambassadors_info", newUser.useremail),
           newUser
         );
-        Cookies.set("ambassdInfo", JSON.stringify(newUser), { expires: expires });
+        Cookies.set("ambassdInfo", JSON.stringify(newUser), {
+          expires: expires,
+        });
         setAmbassador(newUser);
         console.log("Campus Ambassadors info does not exists");
       }
     }
   };
+
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
