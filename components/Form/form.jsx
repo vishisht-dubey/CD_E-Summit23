@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import { TextField, Button } from "@mui/material";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../utility/firebase";
+import {doc,setDoc} from "firebase/firestore"
 import Spinner from "../Spinner/spinner";
 import { UserAuth } from "../../context/AuthContext";
 export default function FormComponent() {
-  const {user, ambassadorInfo } = UserAuth();
+  const { user} = UserAuth();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [contact, setContact] = useState(0);
@@ -25,16 +26,16 @@ export default function FormComponent() {
   };
   const handleSubmit = async (event) => {
     setLoading(true);
-    ambassadorInfo(formData);
-    const campusAmbassadorCollection = collection(
-      db,
-      "campus_ambassadors_info"
-    );
-    const newCampusAmbassadorRef = await addDoc(
-      campusAmbassadorCollection,
+    // ambassadorInfo(formData);
+    // const campusAmbassadorCollection = collection(
+    //   db,
+    //   "campus_ambassadors_info"
+    // );
+    const newCampusAmbassadorRef = await setDoc(
+      doc(db, "campus_ambassadors_info", user.email),
       formData
     );
-    // newCampusAmbassadorRef.id ? setLoading(false) : setLoading(true);
+    // console.log(newCampusAmbassadorRef.id);
     location.reload();
   };
   return (

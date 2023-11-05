@@ -17,7 +17,6 @@ const AuthContext = createContext();
 export const AuthContextProvider = ({ children }) => {
   const router = useRouter();
   const [user, setUser] = useState({});
-  const [ambassador, setAmbassador] = useState({});
   const [loading, setLoading] = useState(false);
   const currentDate = new Date();
   const expires = new Date(
@@ -76,39 +75,6 @@ export const AuthContextProvider = ({ children }) => {
     }
   };
 
-  const ambassadorInfo = async (person) => {
-    if (user?.email) {
-      const AIref = doc(db, "campus_ambassadors_info", user.email);
-      const AISnap = await getDoc(AIref);
-      if (AISnap.exists()) {
-        setAmbassador(AISnap.data());
-        Cookies.set("ambassdInfo", JSON.stringify(AISnap.data()), {
-          expires: expires,
-        });
-        console.log("Campus Ambassadors info exists");
-      } else {
-        const newUser = {
-          username: person.username,
-          useremail: person.useremail,
-          usercontact: person.usercontact,
-          userlinkedinid: person.userlinkedinid,
-          userinstaid: person.userinstaid,
-          userinstitutename: person.userinstitutename,
-          useryearofstudy: person.useryearofstudy,
-        };
-        await setDoc(
-          doc(db, "campus_ambassadors_info", newUser.useremail),
-          newUser
-        );
-        Cookies.set("ambassdInfo", JSON.stringify(newUser), {
-          expires: expires,
-        });
-        setAmbassador(newUser);
-        console.log("Campus Ambassadors info does not exists");
-      }
-    }
-  };
-
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -127,8 +93,7 @@ export const AuthContextProvider = ({ children }) => {
         logout,
         isLoggedIn,
         loading,
-        ambassadorInfo,
-        ambassador,
+      
       }}
     >
       {children}

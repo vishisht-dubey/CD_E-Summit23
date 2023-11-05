@@ -35,23 +35,24 @@ const Loader = () => {
 };
 const Dashboard = () => {
   const isFirstLoggedIn = Cookies.get("isFirstLoggedIn");
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
-  const { handleGoogleSignIn, logout, user, isLoggedIn, ambassadorInfo } =
+  const { handleGoogleSignIn, logout, user, isLoggedIn } =
     UserAuth();
-  const [isAmbassadorPresent, setisAmbassadorPresent] = useState(false);
+  const [isAmbassadorPresent, setisAmbassadorPresent] = useState("checking");
   // console.log(ambassador);
   // console.log(user);
   const registrations = user.registrations?.map((person, id) =>
     createData(id, person.name, person.email)
   );
-  const ambassdInfo = Cookies.get("ambassdInfo");
-  let ambassdData;
-  try {
-    ambassdData = JSON.parse(ambassdInfo);
-  } catch (err) {
-    console.log(err);
-  }
-  console.log(ambassdData);
+  // const ambassdInfo = Cookies.get("ambassdInfo");
+  // let ambassdData;
+  // try {
+  //   ambassdData = JSON.parse(ambassdInfo);
+  // } catch (err) {
+  //   console.log(err);
+  // }
+  // console.log(ambassdData);
   const checkAmbassador = async () => {
     try {
       const AIref = doc(db, "campus_ambassadors_info", user.email);
@@ -67,11 +68,14 @@ const Dashboard = () => {
       console.log(err);
     }
   };
-  useEffect(() => {
+  const formFill = () => {
     checkAmbassador();
-  }, []);
-  console.log(isAmbassadorPresent);
-
+    if (isAmbassadorPresent) {
+      return false;
+    } else {
+      return true;
+    }
+  };
   return (
     <>
       {!user?.name ? (
@@ -84,7 +88,7 @@ const Dashboard = () => {
             Login
           </button>
         </div>
-      ) : !isAmbassadorPresent ? (
+      ) : formFill() ? (
         <div className={style.container1}>
           <FormComponent />
         </div>
