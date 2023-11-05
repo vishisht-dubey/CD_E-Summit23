@@ -112,17 +112,19 @@ const Dashboard = () => {
 
               <div className={style.row4}>
                 <h1 className={style.data}>REFERAL CODE:</h1>
-                <h1 className={style.data} style={{ color: "#FFA500" }}>
-                  {user.referral_code}
-                </h1>
-                <Clipboard text={user.referral_code} />
+                <div className="flex flex-row">
+                  <h1 className={style.data} style={{ color: "#FFA500" }}>
+                    {user.referral_code}
+                  </h1>
+                  <Clipboard text={user.referral_code} />
+                </div>
               </div>
             </div>
           </div>
           <div className={`${style.row}  ${style.row2} `}>
             <div className={`${style.col}  ${style.col2} `}>
               <h1 className={style.heading}>Leaderboard</h1>
-              <div className="inline-flex w-full sm:w-auto sm:mx-2">
+              <div className="inline-flex w-full sm:w-auto sm:mx-2 justify-center">
                 <button
                   className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:ring-orange-300 dark:focus:ring-orange-600"
                   onClick={() => {
@@ -142,9 +144,7 @@ const Dashboard = () => {
                 {registrations.length ? (
                   <RegistrationsTable rows={registrations} />
                 ) : (
-                  <h1 className={style.heading} style={{ color: "red" }}>
-                    No registrations!
-                  </h1>
+                  ""
                 )}
               </div>
             </div>
