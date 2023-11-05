@@ -39,19 +39,11 @@ const Dashboard = () => {
   const router = useRouter();
   const { handleGoogleSignIn, logout, user, isLoggedIn } = UserAuth();
   const [isAmbassadorPresent, setisAmbassadorPresent] = useState("checking");
-  // console.log(ambassador);
-  // console.log(user);
+ 
   const registrations = user.registrations?.map((person, id) =>
     createData(id, person.name, person.email)
   );
-  // const ambassdInfo = Cookies.get("ambassdInfo");
-  // let ambassdData;
-  // try {
-  //   ambassdData = JSON.parse(ambassdInfo);
-  // } catch (err) {
-  //   console.log(err);
-  // }
-  // console.log(ambassdData);
+  
   const checkAmbassador = async () => {
     try {
       const AIref = doc(db, "campus_ambassadors_info", user.email);

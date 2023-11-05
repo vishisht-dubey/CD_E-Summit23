@@ -35,7 +35,6 @@ export default function FormComponent() {
       doc(db, "campus_ambassadors_info", user.email),
       formData
     );
-    // console.log(newCampusAmbassadorRef.id);
     location.reload();
   };
   return (

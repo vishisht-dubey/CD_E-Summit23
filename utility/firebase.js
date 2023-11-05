@@ -3,19 +3,22 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
+import dotenv from "dotenv";
+dotenv.config();
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAa61DviHlgR3LLPQKQ4ABuwdO7_eX4sro",
-  authDomain: "test-pro-prod.firebaseapp.com",
-  projectId: "test-pro-prod",
-  storageBucket: "test-pro-prod.appspot.com",
-  messagingSenderId: "784978236687",
-  appId: "1:784978236687:web:c97e63a2d00789d2f01a7a",
-  measurementId: "G-1BH4RDYNLF",
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_CLIENT_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_CLIENT_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_CLIENT_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_CLIENT_STORAGE_BUCKET,
+  messagingSenderId:
+    process.env.NEXT_PUBLIC_FIREBASE_CLIENT_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_CLIENT_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_CLIENT_MEASUREMENT_ID,
 };
 
 // Initialize Firebase

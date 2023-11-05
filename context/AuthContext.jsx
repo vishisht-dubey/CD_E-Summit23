@@ -52,7 +52,6 @@ export const AuthContextProvider = ({ children }) => {
       const CDref = doc(db, "campus directors", googleUser.uid);
       const CDSnap = await getDoc(CDref);
       if (CDSnap.exists()) {
-        // console.log("Document data:", CDSnap.data());
         setUser(CDSnap.data());
         Cookies.set("isFirstLoggedIn", "false", { expires: expires });
       } else {
