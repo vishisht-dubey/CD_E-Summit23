@@ -17,7 +17,7 @@ const AuthContext = createContext();
 export const AuthContextProvider = ({ children }) => {
   const router = useRouter();
   const [user, setUser] = useState({});
-  const [loading, setLoading] = useState(false);
+ 
   const currentDate = new Date();
   const expires = new Date(
     currentDate.getFullYear() + 10,
@@ -27,16 +27,16 @@ export const AuthContextProvider = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(user?.displayName);
   // Cookies.set("isFirstLoggedIn", "false", { expires: expires });
   const handleGoogleSignIn = async () => {
-    setLoading(true);
+   
     try {
       const provider = new GoogleAuthProvider();
       signInWithPopup(auth, provider);
       setIsLoggedIn(true);
     } catch (error) {
       setIsLoggedIn(false);
-      console.log(error);
+      
     }
-    setLoading(false);
+  
   };
   const logout = async () => {
     console.log("LOGGING OUT");
@@ -92,7 +92,6 @@ export const AuthContextProvider = ({ children }) => {
         user,
         logout,
         isLoggedIn,
-        loading,
       
       }}
     >

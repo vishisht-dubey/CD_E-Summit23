@@ -15,6 +15,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import logo from "../../assets/ecell_logo.png";
 import Spinner from "../Spinner/spinner.jsx";
+import { useEffect, useState } from "react";
 
 export default function NavbarComponent() {
   const router = useRouter();
@@ -32,8 +33,14 @@ export default function NavbarComponent() {
     "Leaderboard",
   ];
 
-  const { handleGoogleSignIn, logout, user, loading } = UserAuth();
-  // console.log(loading);
+  const { handleGoogleSignIn, logout, user } = UserAuth();
+  const [loading, setLoading] = useState(false);
+  const handleLogin = () => {
+    setLoading(true);
+    handleGoogleSignIn();
+    
+  };
+  console.log(loading);
   return (
     <Layout className="bg-white">
       <Navbar variant="sticky">
@@ -118,6 +125,7 @@ export default function NavbarComponent() {
                 onAction={(actionKey) => {
                   if (actionKey === "logout") {
                     logout();
+                    setLoading(false);
                   } else if (actionKey === "dashboard") {
                     router.push("dashboard");
                   } else if (actionKey === "leaderboard") {
@@ -161,7 +169,7 @@ export default function NavbarComponent() {
           ) : !loading ? (
             <Button
               className="inline-flex items-center w-fit justify-center px-3 py-3 mr-2 text-base text-center text-white rounded-lg bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:ring-orange-300"
-              onClick={handleGoogleSignIn}
+              onClick={handleLogin}
             >
               Login
               <svg

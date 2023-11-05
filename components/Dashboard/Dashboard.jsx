@@ -16,7 +16,7 @@ import {
   TableBody,
 } from "@mui/material";
 import FormComponent from "../Form/form";
-import { getColumnsFromOptions } from "@mui/x-data-grid-generator";
+import Clipboard from "../Clipboard/clipboard";
 import Cookies from "js-cookie";
 function createData(rank, name, email) {
   return { rank, name, email };
@@ -37,8 +37,7 @@ const Dashboard = () => {
   const isFirstLoggedIn = Cookies.get("isFirstLoggedIn");
   const [loading, setLoading] = useState(false);
   const router = useRouter();
-  const { handleGoogleSignIn, logout, user, isLoggedIn } =
-    UserAuth();
+  const { handleGoogleSignIn, logout, user, isLoggedIn } = UserAuth();
   const [isAmbassadorPresent, setisAmbassadorPresent] = useState("checking");
   // console.log(ambassador);
   // console.log(user);
@@ -116,6 +115,7 @@ const Dashboard = () => {
                 <h1 className={style.data} style={{ color: "#FFA500" }}>
                   {user.referral_code}
                 </h1>
+                <Clipboard text={user.referral_code} />
               </div>
             </div>
           </div>
